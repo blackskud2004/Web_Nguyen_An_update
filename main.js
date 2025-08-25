@@ -1,3 +1,23 @@
+// Tự động scale trang theo tỷ lệ màn hình để tránh lỗi responsive trên các máy tính lạ
+function autoScalePage() {
+  // Tỷ lệ chuẩn là 1440px (hoặc 1920px tuỳ thiết kế gốc)
+  var baseWidth = 1440;
+  var w = window.innerWidth;
+  var scale = w / baseWidth;
+  // Chỉ scale nếu nhỏ hơn 1 (màn hình nhỏ hơn thiết kế)
+  if (scale < 1) {
+    document.body.style.transform = 'scale(' + scale + ')';
+    document.body.style.transformOrigin = 'top left';
+    document.body.style.width = (100/scale) + '%';
+    document.body.style.overflowX = 'auto';
+  } else {
+    document.body.style.transform = '';
+    document.body.style.width = '';
+    document.body.style.overflowX = '';
+  }
+}
+window.addEventListener('DOMContentLoaded', autoScalePage);
+window.addEventListener('resize', autoScalePage);
 // Mobile Menu Toggle
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');

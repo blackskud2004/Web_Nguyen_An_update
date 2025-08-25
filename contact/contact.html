@@ -11,9 +11,9 @@
 <body class="bg-gray-100">
    <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
         <!-- Logo -->
-        <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
-          style="backdrop-filter: none;" onclick="window.location.href='../index.html'">
-          <img src="../logo/logo.png" alt="MCR Logo" class="w-28 h-28 object-contain mb-1">
+       <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
         </div>
         <!-- Menu -->
         <div class="flex-1 flex items-center justify-end relative z-10">
@@ -38,35 +38,18 @@
         <!-- Form liên hệ -->
         <div class="flex-1 md:max-w-[50%] md:pl-12 bg-white bg-opacity-90 rounded-2xl shadow-xl p-10">
             <p class="text-2xl font-bold mb-2 mt-4 text-gray-800">Liên hệ</p>
-            <h1 class="text-5xl font-extrabold text-orange-500 leading-tight mb-4">Nếu có bất kỳ câu hỏi nào</h1>
-            <p class="mb-8 text-lg text-gray-700">Vui lòng điền vào biểu mẫu bên dưới hoặc gọi số <span class="font-semibold text-orange-500">024 6659 9222</span></p>
-            <form class="space-y-8">
-                <div class="flex gap-6">
-                    <div class="flex-1">
-                        <label class="block mb-2 font-medium text-gray-700">Tên</label>
-                        <input type="text" class="w-full border-b-2 border-gray-300 focus:border-orange-500 outline-none py-2 bg-transparent" placeholder="Nhập tên..." />
-                    </div>
-                    <div class="flex-1">
-                        <label class="block mb-2 font-medium text-gray-700">Họ</label>
-                        <input type="text" class="w-full border-b-2 border-gray-300 focus:border-orange-500 outline-none py-2 bg-transparent" placeholder="Nhập họ..." />
-                    </div>
-                </div>
-                <div class="flex gap-6">
-                    <div class="flex-1">
-                        <label class="block mb-2 font-medium text-gray-700">Email *</label>
-                        <input type="email" class="w-full border-b-2 border-gray-300 focus:border-orange-500 outline-none py-2 bg-transparent" placeholder="you@email.com" required />
-                    </div>
-                    <div class="flex-1">
-                        <label class="block mb-2 font-medium text-gray-700">Chủ đề</label>
-                        <input type="text" class="w-full border-b-2 border-gray-300 focus:border-orange-500 outline-none py-2 bg-transparent" placeholder="Chủ đề..." />
-                    </div>
-                </div>
-                <div>
-                    <label class="block mb-2 font-medium text-gray-700">Để lại tin nhắn cho chúng tôi...</label>
-                    <textarea rows="5" class="w-full border border-gray-300 focus:border-orange-500 outline-none p-3 rounded-xl resize-none bg-transparent" placeholder="Nội dung tin nhắn..."></textarea>
-                </div>
-                <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-12 py-4 text-lg mt-2 rounded-xl shadow transition-all duration-200">Gửi</button>
-            </form>
+            <h1 class="text-5xl font-extrabold text-orange-500 leading-tight mb-4">Nếu bạn có bất cứ câu hỏi nào</h1>
+            <h4 class="text-3xl font-extrabold text-black-500 leading-tight mb-4">Chúng tôi luôn sẵn sàng hỗ trợ bạn!</h4>
+            <div class="flex flex-col items-center gap-8 mt-8">
+              <div class="flex items-center gap-4 text-3xl font-bold text-orange-500 select-text">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                Tel: 024 6659 9222 <br> hoặc <br> 0387.547.265 - Mrs. Thảo
+              </div>
+              <a href="https://www.facebook.com/nguyenan.org" target="_blank" rel="noopener" class="flex items-center gap-4 text-3xl font-bold text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" class="w-10 h-10"><path d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.09 44.38-121.09 124.72v70.62H22.89V288h81.38v224h100.2V288z"/></svg>
+                Facebook
+              </a>
+            </div>
         </div>
         <!-- Ảnh minh họa -->
         <div class="flex-1 flex items-end justify-center pb-2">
@@ -94,9 +77,9 @@
         <!-- Mạng xã hội -->
         <div>
           <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
-          <p><a href="#" class="hover:underline">Facebook</a></p>
-          <p><a href="#" class="hover:underline">Instagram</a></p>
-          <p><a href="#" class="hover:underline">LinkedIn</a></p>
+          <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+          <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Instagram</a></p>
+          <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">LinkedIn</a></p>
         </div>
         <!-- Liên hệ -->
         <div>
@@ -121,3 +104,4 @@
   </footer>
 </body>
 </html>
+<script src="main.js"></script>
