@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công Ty Cổ Phần Nguyễn An</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="google-site-verification" content="hk8J2VVQF7oOxQaUpj6seD1rtct3HYaN8uUjg0M7dxs"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="logo.png" type="image/png" href="/logo/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-100">
+  <!-- Modal thông báo update -->
+  <div id="update-modal" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;">
+    <div style="background:white;padding:2.5rem 2rem 2rem 2rem;border-radius:1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.18);max-width:90vw;min-width:320px;text-align:center;position:relative;">
+      <button onclick="document.getElementById('update-modal').style.display='none'" style="position:absolute;top:0.5rem;right:0.7rem;font-size:2rem;color:#ff7300;background:none;border:none;cursor:pointer;line-height:1;">&times;</button>
+      <div style="font-size:2rem;font-weight:700;color:#ff7300;margin-bottom:1rem;">Thông báo</div>
+      <div style="font-size:1.2rem;color:#333;">Website đang trong quá trình <b>update</b>.<br>Kính mong quý khách thông cảm!</div>
+    </div>
+  </div>
+  <!-- Header + Hero Section -->
+  <section id="home"
+    class="relative h-screen flex flex-col justify-start items-center text-white overflow-hidden p-0 m-0">
+    <img src="img/Den_Phu_Dong_5.png"  class="absolute inset-0 w-full h-full object-cover z-0"> 
+    <div class="relative z-10 w-full pt-8 md:pt-12 lg:pt-16">
+      <!-- Navbar moved inside hero -->
+      <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+        <!-- Logo -->
+        <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          <img src="logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+        </div>
+        <!-- Menu -->
+        <div class="flex-1 flex items-center justify-end relative z-10">
+          <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
+            style="position:relative;">
+            <!-- Pattern background for menu only -->
+            <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+              <img src="chuvan/chuvantrang.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-80"
+                style="mix-blend-mode: multiply;" />
+            </div>
+            <a href="introduce/introduce.html" class="menu-link px-7 py-4 text-white font-semibold hover:underline relative z-10">Giới thiệu</a>
+            <a href="project/project.html" class="menu-link px-7 py-4 text-white font-semibold hover:underline relative z-10">Dự án</a>
+            <a href="#services-overview" class="menu-link px-7 py-4 text-white font-semibold hover:underline relative z-10">Dịch vụ</a>
+            <a href="showroom/showroom.html" class="menu-link px-7 py-4 text-white font-semibold hover:underline relative z-10">Showroom</a>
+            <a href="recruitment/recruitment.html" class="menu-link px-7 py-4 text-white font-semibold hover:underline relative z-10">Tuyển dụng</a>
+            <a href="contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+          </div>
+        </div>
+      </nav>
+      </div>
+    <div class="container mx-auto px-4 text-center relative z-10 flex-1 flex flex-col justify-center items-start">
+      <h1
+        class="text-left w-full max-w-5xl font-extrabold leading-tight mb-4 drop-shadow-lg text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[3vw]">
+        Công Ty Cổ Phần 
+        <br> 
+      </h1>
+      <h1
+        class="text-left w-full max-w-5xl font-extrabold leading-tight mb-4 drop-shadow-lg text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[6vw]">
+         Nguyễn An  
+        <br> 
+      </h1>
+      <p class="text-left w-full max-w-5xl text-2xl md:text-5xl font-normal mb-10 drop-shadow-lg">Giữ Gìn Bản Sắc Việt</p>
+      <p class="text-left w-full max-w-5xl text-2xl md:text-3xl font-normal mb-10 drop-shadow-lg">Nhà thầu đáng tin cậy của những công trình thế kỉ</p>
+      <div class="flex gap-6 w-full max-w-5xl">
+        <a href="project/project.html" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-xl">Xem dự án</a>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-10 bg-white">
+    <div class="container mx-auto px-0 w-full">
+      <!-- Text block above image, only main heading and button -->
+      <div class="w-full mx-auto mb-12 px-4 lg:px-0 flex flex-col lg:block relative max-w-none lg:max-w-full">
+        <a href="project/project.html"
+          class="hidden lg:inline-block absolute top-0 right-0 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-lg rounded-none shadow transition-all duration-200 z-20">Đọc
+          thêm</a>
+        <div class="flex flex-col text-left lg:ml-0 mt-0 lg:mt-20">
+          <p class="text-lg mb-2 text-gray-700 whitespace-normal">Bảo tồn di sản là thế mạnh của Nguyễn An</p>
+          <h2 class="text-5xl md:text-6xl font-extrabold text-orange-500 leading-tight mb-0 whitespace-normal">Nguyễn An dẫn
+            đầu</h2>
+          <h2 class="text-5xl md:text-6xl font-extrabold text-orange-500 leading-tight whitespace-normal">về chất lượng
+            tu bổ</h2>
+            <h2 class="text-5xl md:text-6xl font-extrabold text-orange-500 leading-tight whitespace-normal"> tôn tạo dự án </h2>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-0 w-full relative">
+        <div class="flex w-full flex-col lg:flex-row items-center justify-between gap-0 lg:gap-0">
+          <!-- Block 1: Text left, Image right -->
+          <!-- Left: Text -->
+          <div
+            class="flex-1 lg:basis-5/12 px-4 py-8 lg:py-12 lg:pl-0 lg:pr-32 text-left z-10 flex flex-col justify-center">
+            <p class="text-xl md:text-2xl font-bold text-gray-800 mb-4">TƯ VẤN THIẾT KẾ XÂY DỰNG CÔNG TRÌNH</p>
+            <p class="text-base md:text-lg text-gray-700 mb-8 max-w-xl lg:max-w-none">
+              Với hơn 15 năm kinh nghiệm, Công ty cổ phần Nguyễn An tự hào là đơn vị tiên phong trong lĩnh vực tư vấn thiết kế xây dựng, đặc biệt là các công trình di tích lịch sử - văn hóa. 
+              Đội ngũ kiến trúc sư, kỹ sư giàu chuyên môn, kết hợp cùng sự cố vấn từ các giáo sư, tiến sĩ đầu ngành, đảm bảo mọi dự án đạt chuẩn chất lượng cao nhất. <br> <br>
+              Chúng tôi cung cấp phương án thiết kế toàn diện, từ kiến trúc, kết cấu, nội ngoại thất đến các hệ thống hạ tầng kỹ thuật như cấp thoát nước, hệ thống điện, cảnh quan sân vườn…
+              Các dự án tiêu biểu như tu bổ, tôn tạo khu di tích lịch sử cấp Quốc gia đặc biệt đền Phù Đổng (xã Phù Đổng), Tu bổ, tôn tạo kiến trúc – nghệ thuật đền Trấn Vũ (phường Long Biên), Tu bổ, tôn tạo di tích địa điểm Pháo Đài Láng (phường Láng) là minh chứng cho sự tỉ mỉ, sáng tạo và cam kết giữ gìn bản sắc Việt. 
+              Nguyễn An – Sự lựa chọn hàng đầu cho những công trình bền vững, mang giá trị văn hóa và lịch sử trường tồn.
+            </p>
+          </div>
+          <!-- Right: Image -->
+          <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
+            <img src="img/dinhtinhquang1.png"
+              alt="anh1"
+              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+          </div>
+        </div>
+      </div>
+      <!-- Button for mobile, show below image -->
+      <div class="w-full flex justify-end mt-4 lg:hidden">
+        <a href="#"
+          class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-lg rounded-none shadow transition-all duration-200">Đọc
+          thêm</a>
+      </div>
+      <!-- Block 2 -->
+      <div
+        class="sole-block flex flex-col lg:flex-row-reverse items-center justify-between gap-0 lg:gap-0 w-full relative mt-12">
+        <div class="flex w-full flex-col lg:flex-row-reverse items-center justify-between gap-0 lg:gap-0">
+          <!-- Left: Text -->
+          <div
+            class="flex-1 lg:basis-5/12 px-4 py-8 lg:py-20 lg:pl-32 lg:pr-0 text-left z-10 flex flex-col justify-center">
+            <p class="text-xl md:text-2xl font-bold text-gray-800 mb-4">TƯ VẤN GIÁM SÁT XÂY DỰNG CÔNG TRÌNH</p>
+            <p class="text-base md:text-lg text-gray-700 mb-8 max-w-xl lg:max-w-none">
+               Với đội ngũ kỹ sư giàu kinh nghiệm và sự hỗ trợ từ các chuyên gia đầu ngành, chúng tôi cam kết kiểm soát chặt chẽ mọi giai đoạn thi công của dự án: giám sát xây dựng và hoàn thiện công trình dân dụng, các loại công trình đường bộ, cấp thoát nước, giám sát chống mối công trình.
+              <br><br>
+              Công ty đã thực hiện các dự án trên địa bàn thành phố Hà Nội, các tỉnh lân cận tại miền Bắc và Bắc Trung Bộ như đình, chùa Hoàng Xá, chùa Sẻ...
+              Các dự án tiêu biểu công ty đã thực hiện như tư vấn giám sát đình chùa Hoàng Xá (xã Gia Lâm), chùa Sẻ (xã Hát Môn), chùa Kim Lan (xã Bát Tràng) thể hiện sự chuyên nghiệp và tận tâm của chúng tôi.
+            </p>
+          </div>
+          <!-- Right: Image -->
+          <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
+            <img src="img/chuavanphuc.png"
+              alt="anh2"
+              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+          </div>
+        </div>
+      </div>
+      <!-- Block 3 -->
+      <div
+        class="sole-block flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-0 w-full relative mt-12">
+        <div class="flex w-full flex-col lg:flex-row items-center justify-between gap-0 lg:gap-0">
+          <!-- Left: Text -->
+          <div
+            class="flex-1 lg:basis-5/12 px-4 py-8 lg:py-20 lg:pl-0 lg:pr-32 text-left z-10 flex flex-col justify-center">
+            <p class="text-xl md:text-2xl font-bold text-gray-800 mb-4">THI CÔNG XÂY DỰNG CÔNG TRÌNH</p>
+            <p class="text-base md:text-lg text-gray-700 mb-8 max-w-xl lg:max-w-none">
+           Công ty Cổ phần Nguyễn An tự hào là đơn vị hàng đầu trong thi công xây dựng, đặc biệt với các công trình di tích lịch sử
+              và văn hóa. Với đội ngũ kỹ sư, công nhân lành nghề và sự hỗ trợ từ các chuyên gia đầu ngành, chúng tôi đảm bảo chất
+              lượng thi công vượt trội, đúng tiến độ và tôn trọng giá trị truyền thống.
+              <br><br>
+              Các dự án tiêu biểu như tu bổ đình thôn Tranh (Hà Nam), chùa Gia Thượng, chùa Cổ Miễu (Đống Đa), và nhà bia tiến sĩ Văn
+              Miếu – Quốc Tử Giám thể hiện sự tận tâm và chuyên môn cao. Nguyễn An cam kết mang đến những công trình bền vững, lưu giữ
+              bản sắc văn hóa Việt cho muôn đời sau.
+            </p>
+          </div>
+          <!-- Right: Image -->
+          <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
+            <img src="img/denmauauco(bl2).png"
+              alt="anh3"
+              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+          </div>
+        </div>
+      </div>
+      <!-- Block 4: -->
+      <div
+        class="sole-block flex flex-col lg:flex-row-reverse items-center justify-between gap-0 lg:gap-0 w-full relative mt-12">
+        <div class="flex w-full flex-col lg:flex-row-reverse items-center justify-between gap-0 lg:gap-0">
+          <!-- Left: Text -->
+          <div
+            class="flex-1 lg:basis-5/12 px-4 py-8 lg:py-20 lg:pl-32 lg:pr-0 text-left z-10 flex flex-col justify-center">
+            <p class="text-xl md:text-2xl font-bold text-gray-800 mb-4">THẨM TRA CÔNG TRÌNH</p>
+            
+            <p class="text-base md:text-lg text-gray-700 mb-8 max-w-x1 lg:max-w-none">
+                Công ty cổ phần Nguyễn An tự hào là đơn vị uy tín trong lĩnh vực thẩm tra công trình, đảm bảo chất lượng và tính khả thi cho các dự án di tích lịch sử văn hóa và dân dụng.
+                Với đội ngũ nhân viên giàu kinh nghiệm và sự cố vấn từ các PGS, TS, Th.S đầu ngành, chúng tôi thực hiện thẩm tra thiết kế, dự toán với độ chính xác cao. <br> <br>
+                Các dự án thẩm tra tiêu biểu: Xây dựng hạ tầng kỹ thuật và chống xuống cấp đình Kim Lan, xã Kim Lan, huyện Gia Lâm (xã Bát Tràng, thành phố Hà Nội); Tu bổ, tôn tạo di tích nghệ thuật chùa Xuân Đỗ Hạ, phường Cự Khối, quận Long Biên (phường Long Biên, thành phố Hà Nội); 
+                Tu bổ, tôn tạo di tích lịch sử đình Ô Cách, phường Đức Giang, quận Long Biên (phường Việt Hưng, thành phố Hà Nội) minh chứng cho sự chuyên nghiệp và tận tâm của chúng tôi. Nguyễn An cam kết mang đến những đánh giá kỹ lưỡng, góp phần tạo nên các công trình bền vững, gìn giữ giá trị văn hóa Việt
+            </p>
+          </div>
+          
+          <!-- Right: Image -->
+          <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
+            <img src="img/dinhchualamdu(bl9).png"
+              alt="anh4"
+              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+          </div>
+        </div>     
+      </div>     
+    </div>
+  </section>
+
+  <!-- Introduce Section (About/Stats) -->
+  <section id="projects" class="relative min-h-[600px] flex items-center bg-black/70 overflow-hidden">
+    <div class="absolute inset-0 w-full h-full z-0">
+      <img
+        src="img/Den_Giong.jpg"
+        alt="Nguyen An background" class="w-full h-full object-cover opacity-70">
+      <div style="position:absolute;inset:0;width:100%;height:100%;background:rgba(0,0,0,0.55);"></div>
+    </div>
+    <div class="relative z-10 container mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:items-start">
+      <div class="w-full md:w-2/3 lg:w-1/2 text-white">
+        <h3 class="text-lg md:text-2xl font-semibold mb-2">Chúng tôi là ai</h3>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-orange-500 mb-6">Giới thiệu về Nguyễn An</h2>
+        <p class="mb-8 text-base md:text-2xl font-light max-w-xl">Hoạt động trong lĩnh vực xây dựng nhưng Công ty cổ phần Nguyễn An lựa chọn công việc đặc thù, đó là khôi phục và bảo tồn
+        di tích lịch sử. Chúng tôi chọn tên Nguyễn An để tưởng nhớ kiến trúc sư tài ba, người Việt Nam là tổng công trình sư
+        trong việc xây dựng Cố Cung (Tử Cấm Thành). Đây là công trình kiến trúc nổi tiếng thế giới.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div class="flex flex-col items-center md:items-start">
+            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="2008">0</span>
+            <span class="text-base mt-1">Năm thành lập</span>
+            <span class="block w-8 h-0.5 bg-white mt-2"></span>
+          </div>
+          <div>
+            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="1000"> 0</span>
+            <span class="text-5xl">+</span>
+            <div>
+            <span class="text-base mt-1">Dự án đã hoàn thành</span>
+            </div>
+            <span class="block w-8 h-0.5 bg-white mt-2"></span>   
+           </div>
+          <div>
+            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="300 ">0</span>
+            <span class="text-5xl">+</span>
+            <div>
+              <span class="text-base mt-1">Chuyên viên</span>
+            </div>
+            <span class="block w-8 h-0.5 bg-white mt-2"></span>
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="80">0</span>
+            <span class="text-base mt-1">Đối tác kinh doanh</span>
+            <span class="block w-8 h-0.5 bg-white mt-2"></span>
+          </div>
+        </div>
+        <!-- <a href="introduce/introduce.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-lg rounded shadow transition-all duration-200 mt-4">Đọc thêm</a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview Section -->
+  <section id="services-overview" class="bg-[#fafafa] py-16">
+    <div class="container mx-auto flex flex-col lg:flex-row items-start justify-between px-4 lg:px-0">
+      <!-- Left: Title & Description -->
+      <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+        <p class="text-xl font-normal mb-2">Dịch vụ</p>        
+        <h2 class="text-4xl md:text-5xl font-extrabold text-orange-500 leading-tight mb-6">Nguyễn An cung cấp <br> nhiều dịch
+          vụ đáp ứng <br> mọi nhu cầu</h2>
+        <p class="text-base text-gray-700 mb-8 max-w-md">Chuyên tư vấn, thiết kế, thi công lịch sử và dịch vụ xây dựng, Nguyễn An đảm bảo giá trị về di sản đồng thời đạt chuẩn về Kỹ Mỹ Thuật.</p>
+      </div>
+      <!-- Right: Service Grid -->
+      <div class="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+         <a href="service/tuvanthietke.html" class="bg-white p-8 flex flex-col items-center justify-center shadow-lg rounded-xl border border-orange-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-orange-500 group cursor-pointer relative overflow-hidden">
+          <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl">
+            <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl" style="background-image:url('chuvan/chuvancam.png');background-size:800px auto;background-repeat:no-repeat;background-position:center;opacity:1;mix-blend-mode:multiply;"></span>
+          </span>
+          <span class="relative z-10 flex flex-col items-center">
+            <!-- Font Awesome Icon: Drafting Compass (Tư vấn thiết kế) -->
+            <i class="fa-solid fa-compass-drafting mb-4 text-orange-500 text-4xl group-hover:scale-110 transition-transform duration-300"></i>
+            <p class="text-lg font-bold text-orange-500 text-center tracking-wide group-hover:text-orange-600">TƯ VẤN THIẾT KẾ</p>
+          </span>
+        </a>
+
+        <a href="service/giamsat.html" class="bg-white p-8 flex flex-col items-center justify-center shadow-lg rounded-xl border border-orange-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-orange-500 group cursor-pointer relative overflow-hidden">
+          <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl">
+            <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl" style="background-image:url('chuvan/chuvancam.png');background-size:800px auto;background-repeat:no-repeat;background-position:center;opacity:1;mix-blend-mode:multiply;"></span>
+          </span>
+          <span class="relative z-10 flex flex-col items-center">
+            <!-- Font Awesome Icon: Eye (Giám sát) -->
+            <i class="fa-solid fa-eye mb-4 text-orange-500 text-4xl group-hover:scale-110 transition-transform duration-300"></i>
+            <p class="text-lg font-bold text-orange-500 text-center tracking-wide group-hover:text-orange-600">GIÁM SÁT CÔNG TRÌNH</p>
+          </span>
+        </a>
+        
+        <a href="service/thicong.html" class="bg-white p-8 flex flex-col items-center justify-center shadow-lg rounded-xl border border-orange-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-orange-500 group cursor-pointer relative overflow-hidden">
+          <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl">
+            <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl" style="background-image:url('chuvan/chuvancam.png');background-size:800px auto;background-repeat:no-repeat;background-position:center;opacity:1;mix-blend-mode:multiply;"></span>
+          </span>
+          <span class="relative z-10 flex flex-col items-center">
+            <!-- Font Awesome Icon: Hammer (Thi công) -->
+            <i class="fa-solid fa-hammer mb-4 text-orange-500 text-4xl group-hover:scale-110 transition-transform duration-300"></i>
+            <p class="text-lg font-bold text-orange-500 text-center tracking-wide group-hover:text-orange-600">THI CÔNG</p>
+          </span>
+        </a>
+
+        <a href="service/thamtra.html" class="bg-white p-8 flex flex-col items-center justify-center shadow-lg rounded-xl border border-orange-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-orange-500 group cursor-pointer relative overflow-hidden">
+          <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl">
+            <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-xl" style="background-image:url('chuvan/chuvancam.png');background-size:800px auto;background-repeat:no-repeat;background-position:center;opacity:1;mix-blend-mode:multiply;"></span>
+          </span>
+          <span class="relative z-10 flex flex-col items-center">
+            <!-- Font Awesome Icon: Magnifying Glass (Thẩm tra) -->
+            <i class="fa-solid fa-magnifying-glass mb-4 text-orange-500 text-4xl group-hover:scale-110 transition-transform duration-300"></i>
+            <p class="text-lg font-bold text-orange-500 text-center tracking-wide group-hover:text-orange-600">THẨM TRA</p>
+          </span>
+        </a>
+
+        <a href="service/dichvukhac.html" class="bg-white p-8 flex flex-col items-center justify-center shadow-lg rounded-xl border border-orange-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-orange-500 group cursor-pointer relative overflow-hidden">
+          <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-x1">
+            <span class="absolute inset-0 w-full h-full pointer-events-none z-0 rounded-x1" style="background-image:url('chuvan/chuvancam.png');background-size:800px auto;background-repeat:no-repeat;background-position:center;opacity:1;mix-blend-mode:multiply;"></span>
+          </span>
+          <span class="relative z-10 flex flex-col items-center">
+            <!-- Font Awesome Icon: Layer-group (Dịch vụ khác) -->
+            <i class="fa-solid fa-layer-group mb-4 text-orange-500 text-4xl group-hover:scale-110 transition-transform duration-300"></i>
+            <p class="text-lg font-bold text-orange-500 text-center tracking-wide group-hover:text-orange-600">KINH DOANH CÁC DỊCH VỤ KHÁC</p>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Carousel Section -->
+  <div class="w-full flex flex-col items-start justify-between relative overflow-hidden py-20" style="background: none; border-top: none; border: none; box-shadow: none;">
+    <!-- Pattern background for project carousel -->
+    <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+      <img src="chuvan/chuvantrang.png" alt="Pattern project carousel" class="w-full h-full object-cover opacity-100" style="mix-blend-mode: multiply;" />
+    </div>
+ 
+    <div class="relative z-10 w-full lg:w-1/2 mb-14 px-4 lg:pl-40 pt-8 pb-8" style="margin-left:0;">
+      <p class="text-xl font-normal mb-4">Chuyên môn</p>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-orange-500 leading-tight mb-8" style="font-size:3.2rem;">Dự án của Nguyễn An</h2>
+      <p class="mb-8 text-base md:text-lg font-normal max-w-xl" style="font-size:1.25rem;">Các dự án của Nguyễn An trải rộng từ công trình tu bổ di tích, không gian văn hóa đến kiến trúc dân dụng. Mỗi dự án là một nỗ lực kết hợp giữa kỹ thuật hiện đạI, giá trị truyền thống và bàn tay của những nghệ nhân đương đại nhằm tạo nên những công trình bền vững, giàu bản sắc và gắn kết với cộng đồng địa phương.</p>
+    </div>
+    <div class="relative z-10 w-full flex items-center justify-center mt-10 px-8 bottom-16">
+      <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8 px-2 max-w-[1680px]" id="project-carousel">
+        <img src="img/Dinh_Den_Kim_Lien.jpg" alt="Project 1" class="w-full h-[34vw] max-h-[520px] object-cover rounded-xl">
+        <img src="img/denphudong(bl1).png" alt="Project 2" class="w-full h-[34vw] max-h-[520px] object-cover rounded-xl">
+        <img src="../img/lemat(bl7).png" alt="Project 3" class="w-full h-[34vw] max-h-[520px] object-cover rounded-xl">
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Clients Section -->
+<section id="clients" class="bg-[#fafafa] pt-[16rem] pb-[40rem]">
+    <div class="container mx-auto px-10 ">
+      <div class="relative flex flex-col items-center mx-auto max-w-2xl mb-2 bottom-230">
+        <div class="-mt-32 w-full flex justify-center">
+          <p class="text-4xl md:text-2x1 font-extrabold tracking-widest uppercase text-orange-600 bg-orange-50 border-b-8 border-double border-orange-400 rounded-2xl shadow-xl px-8 w-full text-center" style="text-shadow:0 4px 18px #ffb34799,0 1.5px 0 #fff; left:0; right:0; margin-bottom: 30px;">
+            Đối Tác
+          </p>
+        </div>
+<h2 class="text-4xl md:text-4x1 font-extrabold text-orange-500 text-center content-center mb-4 -mt-2">Nguyễn An tin rằng<br><span style="white-space:nowrap;">mỗi đối tác là một người đồng hành lâu dài</span></h2>
+      </div>
+    </div>
+    <div class="container mx-auto px-10">
+      <br>
+      <br>
+      <div class="grid grid-cols-3 gap-y-8 gap-x-6 items-center justify-items-center">
+        <span class="text-2xl font-black">NGHỀ GỐM SỨ</span>
+        <span class="text-2xl font-black">NGHỀ NỀ NGÕA</span>
+        <span class="text-2xl font-black">ĐÁ MỸ NGHỆ</span>
+        <span class="text-2xl font-black">NGHỀ ĐÚC ĐỒNG</span>
+        <span class="text-2xl font-black flex flex-col items-center justify-center">
+          NGHỀ CHẠM KHẮC<br>
+          <span class="block w-full text-center">GỖ THỦ CÔNG</span>
+        </span>
+        <span class="text-2xl font-black">NGHỀ KHẢM TRAI</span>
+      </div>
+    </div>
+      <!-- Divider Art Section -->
+  <div class="relative w-full flex justify-between items-end z-20" style="height:180px; margin-bottom:-580px; pointer-events:none;">
+    <img src="background//thanh_bac (2).png" alt="divider-art" class="w-auto h-[630px] object-contain select-none opacity-120" style="position:relative; left:0; z-index:2; border:none; box-shadow:none; margin-bottom:-230px " draggable="false" />
+  </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="bg-[#fafafa] pt-16 pb-6 mt-0" style="background-image:url('chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
+    <div class="container mx-auto px-4 ">
+      <hr class="border-t border-gray-400 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+        <!-- Logo -->
+        <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+          <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
+          <span class="text-base text-gray-700">NguyenAn.,JSC</span>
+        </div>
+        <!-- Trụ sở chính -->
+        <div>
+          <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
+          <p>195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</p>
+          <p>nguyenanvanhoa@gmail.com</p>
+        </div>
+        <!-- Mạng xã hội -->
+        <div>
+          <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
+          <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+
+        </div>
+        <!-- Liên hệ -->
+        <div>
+          <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
+          <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
+        </div>
+        <!-- Nút liên hệ -->
+        <div class="flex flex-col items-center md:items-end w-full">
+          <a href="contact/contact.html"
+            class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
+            style="min-width:200px; text-align:center;">Liên hệ Nguyễn An</a>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
+        <div>
+          Chính sách Quyền riêng tư<br>
+          © 2035 bản quyền của Nguyễn An.
+        </div>
+        <a href="index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+      </div>
+    </div>
+  </footer>
+
+   <script src="main.js"></script>
+  <script>
+
+    // Counter animation for project stats
+    function animateCounter(el, target, duration = 1500) {
+      let start = 0;
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (target - start) + start);
+        el.textContent = value;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target;
+        }
+      };
+      requestAnimationFrame(step);
+    }
+
+    function handleProjectCounters() {
+      const counters = document.querySelectorAll('.project-counter');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'), 10);
+        animateCounter(counter, target);
+      });
+    }
+
+  // ...existing code...
+    let projectAnimated = false;
+    function onScrollProjectSection() {
+      const section = document.getElementById('projects');
+      if (!section || projectAnimated) return;
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        handleProjectCounters();
+        projectAnimated = true;
+        window.removeEventListener('scroll', onScrollProjectSection);
+      }
+    }
+    window.addEventListener('scroll', onScrollProjectSection);
+    window.addEventListener('DOMContentLoaded', onScrollProjectSection);
+  </script>
+  
