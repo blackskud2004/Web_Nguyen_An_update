@@ -1,0 +1,40 @@
+<!-- SVG Rồng Việt Nam nghệ thuật, bản quyền tự do, phong cách truyền thống, màu vàng nổi bật -->
+<svg id="dragon-vietnam-art" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:900px;max-width:95vw;">
+  <g>
+    <!-- Thân rồng uốn lượn -->
+    <path d="M60 220 Q180 80 320 180 Q420 260 540 120 Q660 0 800 120" stroke="#FFD700" stroke-width="28" fill="none" filter="url(#glow)"/>
+    <!-- Vảy thân rồng -->
+    <path d="M120 180 Q140 160 160 180" stroke="#fff8b0" stroke-width="7" fill="none"/>
+    <path d="M200 120 Q220 100 240 120" stroke="#fff8b0" stroke-width="7" fill="none"/>
+    <path d="M300 180 Q320 160 340 180" stroke="#fff8b0" stroke-width="7" fill="none"/>
+    <path d="M400 220 Q420 200 440 220" stroke="#fff8b0" stroke-width="7" fill="none"/>
+    <path d="M500 160 Q520 140 540 160" stroke="#fff8b0" stroke-width="7" fill="none"/>
+    <path d="M600 80 Q620 60 640 80" stroke="#fff8b0" stroke-width="7" fill="none"/>
+    <!-- Đầu rồng -->
+    <ellipse cx="800" cy="120" rx="48" ry="38" fill="#FFD700" stroke="#B8860B" stroke-width="8"/>
+    <ellipse cx="830" cy="110" rx="8" ry="14" fill="#fff"/>
+    <ellipse cx="790" cy="130" rx="7" ry="10" fill="#fff"/>
+    <ellipse cx="820" cy="100" rx="4" ry="7" fill="#B8860B"/>
+    <ellipse cx="810" cy="140" rx="4" ry="7" fill="#B8860B"/>
+    <!-- Sừng rồng -->
+    <path d="M830 90 Q850 60 820 70" stroke="#B8860B" stroke-width="7" fill="none"/>
+    <path d="M790 100 Q770 60 810 80" stroke="#B8860B" stroke-width="7" fill="none"/>
+    <!-- Miệng rồng -->
+    <path d="M840 130 Q860 140 820 150" stroke="#B8860B" stroke-width="6" fill="none"/>
+    <!-- Chân rồng -->
+    <ellipse cx="700" cy="180" rx="12" ry="28" fill="#FFD700" stroke="#B8860B" stroke-width="7"/>
+    <ellipse cx="720" cy="200" rx="8" ry="18" fill="#FFD700" stroke="#B8860B" stroke-width="5"/>
+    <!-- Đuôi rồng -->
+    <ellipse cx="60" cy="220" rx="18" ry="10" fill="#FFD700" stroke="#B8860B" stroke-width="7"/>
+    <ellipse cx="40" cy="230" rx="8" ry="4" fill="#FFD700" stroke="#B8860B" stroke-width="3"/>
+  </g>
+  <defs>
+    <filter id="glow" x="-20" y="-20" width="940" height="340" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
