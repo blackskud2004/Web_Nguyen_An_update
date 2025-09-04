@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ - Nguyễn An</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-gray-100 font-['Roboto'] min-h-screen">
+    <!-- Navbar -->
+  <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+        <!-- Logo -->
+       <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+        </div>
+        <!-- Menu -->
+        <div class="flex-1 flex items-center justify-end relative z-10">
+          <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
+            style="position:relative;">
+            <!-- Pattern background for menu only -->
+            <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+              <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
+                style="mix-blend-mode: multiply;" />
+            </div>
+            <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
+            <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
+            <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
+            <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
+            <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
+            <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+          </div>
+        </div>
+    </nav>
+
+    <main class="mt-24 px-4 md:px-8 relative z-10">
+        <!-- Section giới thiệu dịch vụ, bố cục so le -->
+        <section class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-16">
+            <div class="flex-1 flex flex-col justify-center order-2 md:order-1">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-orange-500 leading-tight mb-6">Dịch vụ thẩm tra xây dựng</h1>
+                <p class="text-lg text-gray-700 mb-6">Nguyễn An cung cấp dịch vụ thẩm tra, thẩm định thiết kế, dự toán, tổng mức đầu tư và các công trình kỹ thuật, đảm bảo minh bạch, chính xác, đúng quy chuẩn pháp lý.</p>
+                <a href="../contact/contact.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full shadow-lg transition mb-2">Đăng ký tư vấn</a>
+            </div>
+            <div class="flex-1 flex justify-center order-1 md:order-2 mb-8 md:mb-0">
+                <div class="relative w-full max-w-[400px]">
+                    <img src="../img/Anh_Minh_Hoa_8.png" alt="Thẩm tra công trình" class="rounded-3xl shadow-2xl border-8 border-white w-full h-[320px] object-cover">
+                    <img src="https://img.icons8.com/ios-filled/100/ff7300/inspection.png" class="absolute -top-8 -right-8 w-20 h-20 bg-white rounded-full shadow-lg border-4 border-orange-200 p-2" alt="icon inspection">
+                </div>
+            </div>
+        </section>
+        <!-- Section các dịch vụ nổi bật -->
+        <section class="max-w-5xl mx-auto mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-orange-500 mb-8 text-center">Các dịch vụ nổi bật</h2>
+            <div class="flex flex-col gap-10">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1 flex justify-center mb-4 md:mb-0">
+                        <img src="https://img.icons8.com/ios-filled/100/ff7300/blueprint.png" class="w-20 h-20 bg-white rounded-2xl shadow-lg border-4 border-orange-100 p-2" alt="Thẩm tra thiết kế">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Thẩm tra thiết kế</h3>
+                        <p class="text-gray-600">Kiểm tra, đánh giá hồ sơ thiết kế kỹ thuật, đảm bảo tuân thủ tiêu chuẩn, quy chuẩn xây dựng.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="flex-1 flex justify-center mb-4 md:mb-0">
+                        <img src="https://img.icons8.com/ios-filled/100/ff7300/approval.png" class="w-20 h-20 bg-white rounded-2xl shadow-lg border-4 border-orange-100 p-2" alt="Thẩm định dự toán">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Thẩm định dự toán</h3>
+                        <p class="text-gray-600">Thẩm định tổng mức đầu tư, dự toán xây dựng, đảm bảo minh bạch, tối ưu chi phí.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1 flex justify-center mb-4 md:mb-0">
+                        <img src="https://img.icons8.com/ios-filled/100/ff7300/engineering.png" class="w-20 h-20 bg-white rounded-2xl shadow-lg border-4 border-orange-100 p-2" alt="Thẩm tra công trình chuyên biệt">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Thẩm tra công trình chuyên biệt</h3>
+                        <p class="text-gray-600">Thẩm tra các công trình năng lượng, nông nghiệp, công trình kỹ thuật đặc thù.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Block thông tin chi tiết dịch vụ -->
+        <section class="max-w-5xl mx-auto bg-white/90 rounded-2xl shadow-lg p-8 md:p-14 mb-20 border-l-4 border-orange-400">
+            <h2 class="text-xl md:text-2xl font-bold text-orange-500 mb-8 text-center">Chi tiết dịch vụ thẩm tra</h2>
+            <div class="relative pl-8 md:pl-16">
+                <div class="absolute left-2 md:left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-400 to-orange-200 rounded-full"></div>
+                <div class="space-y-10">
+                    <div class="relative flex items-start gap-4">
+                        <div class="flex flex-col items-center z-10">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-400 shadow-md">
+                                <img src='https://img.icons8.com/ios-filled/40/ff7300/blueprint.png' alt="Thiết kế" class="w-6 h-6">
+                            </div>
+                            <div class="flex-1 w-1 bg-orange-200 h-full"></div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 text-base md:text-lg">Thẩm tra thiết kế xây dựng công trình</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-start gap-4">
+                        <div class="flex flex-col items-center z-10">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-400 shadow-md">
+                                <img src='https://img.icons8.com/ios-filled/40/ff7300/approval.png' alt="Dự toán" class="w-6 h-6">
+                            </div>
+                            <div class="flex-1 w-1 bg-orange-200 h-full"></div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 text-base md:text-lg">Thẩm tra thiết kế cơ sở, thiết kế kiến trúc, thiết kế kết cấu (Trong phạm vi chứng chỉ hành nghề đăng ký)</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-start gap-4">
+                        <div class="flex flex-col items-center z-10">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-400 shadow-md">
+                                <img src='https://img.icons8.com/ios-filled/40/ff7300/engineering.png' alt="Chuyên biệt" class="w-6 h-6">
+                            </div>
+                            <div class="flex-1 w-1 bg-orange-200 h-full"></div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 text-base md:text-lg">Lập, thẩm tra tổng mức đầu tư (trừ các công trình quan trọng của quốc gia);</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-start gap-4">
+                        <div class="flex flex-col items-center z-10">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-400 shadow-md">
+                                <img src='https://img.icons8.com/ios-filled/40/ff7300/approval.png' alt="Dự toán" class="w-6 h-6">
+                            </div>
+                            <div class="flex-1 w-1 bg-orange-200 h-full"></div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 text-base md:text-lg">Lập, thẩm tra dự toán xây dựng công trình</p>
+                        </div>
+                    </div>
+                    <!-- Tách phần năng lượng thành nhiều đoạn -->
+                    <div class="relative flex items-start gap-4">
+                        <div class="flex flex-col items-center z-10">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-400 shadow-md">
+                                <img src='https://img.icons8.com/ios-filled/40/ff7300/blueprint.png' alt="Thiết kế" class="w-6 h-6">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700 text-base md:text-lg font-semibold">Thẩm tra thiết kế xây dựng công trình công nghiệp năng lượng gồm:</p>
+                            <ul class="list-disc pl-6 text-gray-700 text-base md:text-lg">
+                                <li>Nhiệt điện, điện địa nhiệt, thủy điện, điện gió, điện mặt trời, điện thủy triều, điện sinh khối, điện rác, điện khí biogas.</li>
+                                <li>Thẩm tra thiết kế xây dựng công trình phục vụ nông nghiệp và phát triển nông thôn (thủy lợi, đê điều).</li>
+                                <li>Thẩm tra thiết kế xây dựng chuyên biệt: cọc, gia cố, xử lý nền móng, kết cấu công trình, kết cấu ứng suất trước; kết cấu bao che, mặt dựng công trình…</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hình ảnh minh họa thực tế -->
+        <section class="w-full max-w-7xl mx-auto mb-0 flex flex-col items-center justify-center px-0 md:px-0">
+            <img src="../img/Den_Giong.jpg" alt="Công trình thực tế" class="rounded-3xl shadow-2xl border-8 border-orange-400 w-full h-[420px] md:h-[600px] object-cover">
+        </section>
+    </main>
+
+    <!-- Footer -->
+<footer class="bg-[#fafafa] pt-16 pb-6 mt-0" style="background-image:url('../chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
+        <div class="container mx-auto px-4">
+            <hr class="border-t border-gray-400 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+                <!-- Logo -->
+                <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+                    <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
+                    <span class="text-base text-gray-700">NguyenAn.,JSC</span>
+                </div>
+                <!-- Trụ sở chính -->
+                <div>
+                <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
+                <p>195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</p>
+                <p>nguyenanvanhoa@gmail.com</p>
+                </div>
+                <!-- Mạng xã hội -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
+                    <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+                    
+                </div>
+                <!-- Liên hệ -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
+                    <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
+                </div>
+                <!-- Nút liên hệ -->
+                <div class="flex flex-col items-center md:items-end w-full">
+                    <a href="../contact/contact.html"
+                        class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
+                        style="min-width:200px; text-align:center;">Liên hệ Nguyễn An</a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
+                <div>
+                    Chính sách Quyền riêng tư<br>
+                    © 2035 bản quyền của Nguyễn An.
+                </div>
+                <a href="../index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="main.js"></script>

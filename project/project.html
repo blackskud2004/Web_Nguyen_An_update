@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án - Nguyễn An</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+      <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+        <!-- Logo -->
+      <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+        </div>
+        <!-- Menu -->
+        <div class="flex-1 flex items-center justify-end relative z-10">
+          <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
+            style="position:relative;">
+            <!-- Pattern background for menu only -->
+            <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+              <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
+                style="mix-blend-mode: multiply;" />
+            </div>
+            <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
+            <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
+            <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
+            <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
+            <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
+            <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+          </div>
+        </div>
+    </nav>
+    <main class="mt-24 px-8 flex-1">
+        <section class="max-w-5xl mx-auto ml-40 animate-fade-in">
+            <p class="text-xl mb-4 text-orange-500 font-semibold tracking-wide"> Dự án tiêu biểu</p>
+            <h1 class="text-5xl font-extrabold text-orange-500 leading-tight mb-2 drop-shadow-lg">Dựng xây công trình gìn giữ giá trị di sản</h1>
+            <div class="project-divider wave-divider"></div>
+            <p class="text-lg text-gray-800 mb-8">Mỗi 1 dự án tu bổ, tôn tạo từ khi thiết kế <br> cho đến khi triển khai thực hiện luôn được nhìn nhận như 1 dự án khoa học.</p>
+        </section>
+
+        <!-- Section: picture's project -->
+          <section class="max-w-[1700px] mx-auto mt-8 project-section-bg animate-slide-up">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Block 1 -->
+                <a href="../project/block1.html" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/denphudong(bl1).png" alt="Đền Phù Đổng" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Đền Phù Đổng</p>
+                </a>
+                <!-- Block 2 -->
+                <a href="../project/block2.html" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/Vuon_Hoa_Kim_Quan_1.png" alt="Vườn" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Vườn Hoa Kim Quan</p>
+                </a>
+                <!-- Block 3 -->
+                <a href="../project/block3.html" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/Chua_Bac_Bien_1.png" alt="Chùa Bắc Biên" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Chùa Bắc Biên</p>
+                </a>
+                <!-- Block 4 (fix) -->
+                <a href="#" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/chuananh(bl4).png" alt="Chùa Nành" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Chùa Nành</p>
+                </a>
+                <!-- Block 5 -->
+                <a href="#" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/denkykon(bl5).png" alt="Đền Ký Kon" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Đền Ký Kon</p>
+                </a>
+                <!-- Block 6 -->
+                <a href="#" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/phongtruyenthong(bl6).png" alt="Nội Thất Phòng Truyền Thống Quận Long Biên" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Nội Thất Phòng Truyền Thống Quận Long Biên</p>
+                </a>
+                <!-- Block 7 -->
+                <a href="#" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/lemat(bl7).png" alt="Đình Chùa Lệ Mật" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Đình Chùa Lệ Mật</p>
+                </a>
+                <!-- Block 8 -->
+                <a href="#" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/baoan(bl8).png" alt="Chùa Báo Ân" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Chùa Báo Ân</p>
+                </a>
+                <!-- Block 9 -->
+                <a href="#" class="project-card group animate-zoom-in" style="text-decoration: none; color: inherit;">
+                    <img src="../img/dinhchualamdu(bl9).png" alt="Đình Chùa Lâm Du" class="w-full h-[480px] object-cover project-img">
+                    <div class="img-overlay"></div>
+                    <p>Đình Chùa Lâm Du</p>
+                </a>
+            </div>
+        </section>
+        <!-- Section: In progress -->
+        <div class="w-full flex flex-col items-center my-20">
+          <div class="w-full flex justify-center">
+            <div class="h-1.5 w-full max-w-3xl bg-gradient-to-r from-orange-300 via-orange-500 to-orange-300 rounded-full shadow-lg"></div>
+          </div>
+        </div>
+        <div class="w-full flex justify-center relative">
+          <section class="max-w-[1200px] w-full mx-auto mb-20 px-4 py-12 rounded-2xl shadow-xl bg-gradient-to-br from-[#fff7ed] via-[#fff] to-[#ffe6c7] border border-orange-100 flex items-center relative">
+            <!-- Hoa dây hai bên section-->
+            <div class="hidden md:block select-none absolute -left-80 top-1/2 -translate-y-1/2 w-[90px] lg:w-[152px] z-10 pointer-events-none">
+
+              <img src="../background//hoa_day .png" alt="hoa day left" class="w-full" draggable="false" />
+            </div>
+            <div class="hidden md:block select-none absolute -right-80 top-1/2 -translate-y-1/2 w-[90px] lg:w-[152px] z-10 pointer-events-none">
+              <img src="../background/hoa_day .png" alt="hoa day right" class="w-full" style="transform: scaleX(-1);" draggable="false" />
+            </div>
+            <div class="flex-1 w-full">
+              <h2 class="text-4xl md:text-5xl font-extrabold text-orange-500 mb-6 text-center drop-shadow">Các dự án đang thực hiện</h2>
+              <p class="text-lg text-gray-700 mb-10 text-center max-w-2xl mx-auto">Chúng tôi hiện đang triển khai nhiều dự án trọng điểm về bảo tồn, tu bổ di tích, xây dựng công trình văn hóa và phát triển không gian truyền thống tại nhiều địa phương trên cả nước.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <!-- Project 1 -->
+            <a href="#" class="flex flex-col md:flex-row items-stretch gap-5 bg-white/90 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all border border-orange-100 group focus:ring-4 focus:ring-orange-200 outline-none" style="text-decoration: none; color: inherit;">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 text-2xl font-bold shadow mb-3 md:mb-0"><span>01</span></div>
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-xl font-bold text-orange-500 mb-1 group-hover:underline">Trùng tu Đền Trấn Vũ</h3>
+                <p class="text-gray-700 mb-2">Dự án bảo tồn, phục dựng kiến trúc đình cổ, giữ gìn giá trị văn hóa truyền thống của địa phương.</p>
+                <div class="relative w-full h-56 md:h-80 overflow-hidden rounded-xl shadow-sm">
+                  <img src="../img/Den_Tran_Vu_1.png" alt="Đình Kim Quan" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <span class="inline-block mt-3 text-orange-500 font-semibold group-hover:underline">Xem chi tiết →</span>
+              </div>
+            </a>
+            <!-- Project 2 -->
+            <a href="#" class="flex flex-col md:flex-row items-stretch gap-5 bg-white/90 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all border border-orange-100 group focus:ring-4 focus:ring-orange-200 outline-none" style="text-decoration: none; color: inherit;">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 text-2xl font-bold shadow mb-3 md:mb-0"><span>02</span></div>
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-xl font-bold text-orange-500 mb-1 group-hover:underline">Trung Tu Đền chùa Bà Tấm</h3>
+                <p class="text-gray-700 mb-2">Xây dựng mới và cải tạo các hạng mục chùa, cảnh quan, góp phần phát triển không gian tâm linh.</p>
+                <div class="relative w-full h-56 md:h-80 overflow-hidden rounded-xl shadow-sm">
+                  <img src="../img/Den_Chua_Ba_Tam_1.png" alt="Đình Tình Quang" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <span class="inline-block mt-3 text-orange-500 font-semibold group-hover:underline">Xem chi tiết →</span>
+              </div>
+            </a>
+            <!-- Project 3 -->
+            <a href="#" class="flex flex-col md:flex-row items-stretch gap-5 bg-white/90 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all border border-orange-100 group focus:ring-4 focus:ring-orange-200 outline-none" style="text-decoration: none; color: inherit;">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 text-2xl font-bold shadow mb-3 md:mb-0"><span>03</span></div>
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-xl font-bold text-orange-500 mb-1 group-hover:underline">Trùng Tu Đình Quán Tình</h3>
+                <p class="text-gray-700 mb-2">Phục dựng, bảo tồn các hạng mục nhà bia, tôn vinh truyền thống hiếu học và lịch sử khoa bảng Việt Nam.</p>
+                <div class="relative w-full h-56 md:h-80 overflow-hidden rounded-xl shadow-sm">
+                  <img src="../img/dinhquantinh.png" alt="Đình Ngô" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <span class="inline-block mt-3 text-orange-500 font-semibold group-hover:underline">Xem chi tiết →</span>
+              </div>
+            </a>
+            <!-- Project 4 -->
+            <a href="#" class="flex flex-col md:flex-row items-stretch gap-5 bg-white/90 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all border border-orange-100 group focus:ring-4 focus:ring-orange-200 outline-none" style="text-decoration: none; color: inherit;">
+              <div class="flex-shrink-0 w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 text-2xl font-bold shadow mb-3 md:mb-0"><span>04</span></div>
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-xl font-bold text-orange-500 mb-1 group-hover:underline">Trùng tu Đình TÌnh Quang</h3>
+                <p class="text-gray-700 mb-2">Thiết kế, xây dựng không gian sinh hoạt cộng đồng, bảo tồn nét đẹp làng nghề truyền thống.</p>
+                <div class="relative w-full h-56 md:h-80 overflow-hidden rounded-xl shadow-sm">
+                  <img src="../img/dinhtinhquang.png" alt="Chùa Vạn Phúc" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <span class="inline-block mt-3 text-orange-500 font-semibold group-hover:underline">Xem chi tiết →</span>
+              </div>
+            </a>
+          </div>
+            </div>
+          </section>
+        </div>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#fafafa] pt-16 pb-6 mt-0" style="background-image:url('../chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
+        <div class="container mx-auto px-4">
+            <hr class="border-t border-gray-400 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+                <!-- Logo -->
+                <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+                    <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
+                    <span class="text-base text-gray-700">NguyenAn.,JSC</span>
+                </div>
+                <!-- Trụ sở chính -->
+                <div>
+                <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
+                <p>195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</p>
+                <p>nguyenanvanhoa@gmail.com</p>
+                </div>
+                <!-- Mạng xã hội -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
+                    <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+                    
+                </div>
+                <!-- Liên hệ -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
+                    <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
+                </div>
+                <!-- Nút liên hệ -->
+                <div class="flex flex-col items-center md:items-end w-full">
+                    <a href="../contact/contact.html"
+                        class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
+                        style="min-width:200px; text-align:center;">Liên hệ Nguyễn An</a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
+                <div>
+                    Chính sách Quyền riêng tư<br>
+                    © 2035 bản quyền của Nguyễn An.
+                </div>
+                <a href="../index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="main.js"></script>

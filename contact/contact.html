@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Nguyễn An</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-gray-100">
+   <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+        <!-- Logo -->
+       <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+        </div>
+        <!-- Menu -->
+        <div class="flex-1 flex items-center justify-end relative z-10">
+          <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
+            style="position:relative;">
+            <!-- Pattern background for menu only -->
+            <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+              <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
+                style="mix-blend-mode: multiply;" />
+            </div>
+            <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
+            <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
+            <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
+            <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
+            <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
+            <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+          </div>
+        </div>
+    </nav>
+    <!-- Contact Form Section -->
+    <main class="w-full max-w-[1700px] mx-auto flex flex-col md:flex-row items-start gap-12 mt-24 px-4">
+        <!-- Form liên hệ -->
+        <div class="flex-1 md:max-w-[50%] md:pl-12 bg-white bg-opacity-90 rounded-2xl shadow-xl p-10">
+            <p class="text-2xl font-bold mb-2 mt-4 text-gray-800">Liên hệ</p>
+            <h1 class="text-5xl font-extrabold text-orange-500 leading-tight mb-4">Nếu bạn có bất cứ câu hỏi nào</h1>
+            <h4 class="text-3xl font-extrabold text-black-500 leading-tight mb-4">Chúng tôi luôn sẵn sàng hỗ trợ bạn!</h4>
+            <div class="flex flex-col items-center gap-8 mt-8">
+              <div class="flex items-center gap-4 text-3xl font-bold text-orange-500 select-text">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg> -->
+                Hotline: 024 6659 9222 <br>  <br>CSKH: 0387.547.265 - Mrs. Thảo
+              </div>
+              <a href="https://www.facebook.com/nguyenan.org" target="_blank" rel="noopener" class="flex items-center gap-4 text-3xl font-bold text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" class="w-10 h-10"><path d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.09 44.38-121.09 124.72v70.62H22.89V288h81.38v224h100.2V288z"/></svg>
+                Facebook
+              </a>
+            </div>
+        </div>
+        <!-- Ảnh minh họa -->
+        <div class="flex-1 flex items-end justify-center pb-2">
+            <div class="w-full max-w-[700px] h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-100 bg-white flex items-end justify-center">
+                <img src="../img/Den_Phu_Dong_4.png" alt="Mũ bảo hộ và áo phản quang" class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-500">
+            </div>
+        </div>
+    </main>
+  <!-- Footer -->
+<footer class="bg-[#fafafa] pt-16 pb-6 mt-0" style="background-image:url('../chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
+    <div class="container mx-auto px-4">
+      <hr class="border-t border-gray-400 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+        <!-- Logo -->
+        <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+          <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
+          <span class="text-base text-gray-700">NguyenAn.,JSC</span>
+        </div>
+        <!-- Trụ sở chính -->
+        <div>
+          <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
+          <p>195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</p>
+          <p class="mt-2">024 6659 9222<br>nguyenanvanhoa@gmail.com</p>
+        </div>
+        <!-- Mạng xã hội -->
+        <div>
+          <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
+          <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+          
+        </div>
+        <!-- Liên hệ -->
+        <div>
+          <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
+          <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
+        </div>
+        <!-- Nút liên hệ -->
+        <div class="flex flex-col items-center md:items-end w-full">
+          <a href="../contact/contact.html"
+            class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
+            style="min-width:200px; text-align:center;">Liên hệ Nguyễn An</a>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
+        <div>
+          Chính sách Quyền riêng tư<br>
+          © 2035 bản quyền của Nguyễn An.
+        </div>
+        <a href="../index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+<script src="main.js"></script>

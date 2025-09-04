@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ứng tuyển vị trí - Nguyễn An</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+        <!-- Logo -->
+       <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+        </div>
+        <!-- Menu -->
+        <div class="flex-1 flex items-center justify-end relative z-10">
+          <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
+            style="position:relative;">
+            <!-- Pattern background for menu only -->
+            <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+              <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
+                style="mix-blend-mode: multiply;" />
+            </div>
+            <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
+            <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
+            <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
+            <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
+            <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
+            <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+          </div>
+        </div>
+    </nav>
+
+<body class="bg-[#f6f8fa] min-h-screen font-['Roboto']">
+  <div class="max-w-5xl mx-auto py-10 px-2 md:px-0 flex flex-col md:flex-row gap-8">
+    <!-- Main content -->
+    <div class="flex-1 bg-white rounded-2xl shadow-xl p-8">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Nữ Luật Sư</h1>
+      <div class="text-orange-500 text-xl font-bold mb-4">Lương Thỏa Thuận</div>
+      <div class="flex flex-wrap gap-4 mb-4">
+        <span class="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-gray-700 text-sm"><svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm0 2c-2.21 0-4 1.79-4 4v4h8v-4c0-2.21-1.79-4-4-4z' /></svg> Kinh nghiệm: Không Yêu Cầu</span>
+        <span class="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-gray-700 text-sm"><svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 17v-2a4 4 0 018 0v2m-4-4a4 4 0 100-8 4 4 0 000 8z' /></svg> Số lượng tuyển: 1</span>
+        <span class="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-gray-700 text-sm"><svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7' /></svg> Hình thức làm việc: Offline</span>
+      </div>
+    <div class="flex flex-wrap gap-4 mb-4 items-center">
+  <button class="ml-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-xl shadow transition-all" onclick="document.getElementById('contact-modal').style.display='flex'">Ứng tuyển ngay</button>
+      </div>
+      <h2 class="text-lg font-bold text-gray-900 mt-8 mb-2">Chi tiết tin tuyển dụng</h2>
+      <div class="text-gray-800 text-base mb-2 font-semibold">Mô tả công việc</div>
+      <ul class="list-disc pl-6 mb-4 text-gray-700 text-sm">
+        <li>Thực hiện theo sự phân công quản lý của Giám đốc.</li>
+        <li>Nghiên cứu, quản lý hợp đồng nhân sự và hợp đồng với chủ đầu tư.</li>
+        <li>Phối hợp, hỗ trợ đối với các bộ phận khác của công ty</li>
+      </ul>
+      <div class="text-gray-800 text-base mb-2 font-semibold">Yêu cầu công việc</div>
+      <ul class="list-disc pl-6 mb-4 text-gray-700 text-sm">
+        <li>Không yêu cầu kinh nghiệm, chấp nhận sinh viên mới ra trường</li>
+        <li>Tốt nghiêp chuyên ngành Luật từ các trường Đại học</li>
+        <li>Biết sử dụng chat gpt</li>
+        <li>Tìm hiểu và tổng hợp các quy định pháp luật liên quan đến hoạt động của doanh nghiệp</li>
+        <li>Là nữ, ngoại hình ưa nhìn</li>
+      </ul>
+        <div class="text-gray-800 text-base mb-2 font-semibold">Quyền lợi được hưởng:</div>
+      <ul class="list-disc pl-6 mb-4 text-gray-700 text-sm">
+        <li>Làm việc trong môi trường chuyên nghiệp, thân thiện. Được đào tạo thêm để nâng cao nghiệp vụ chuyên môn.</li>
+        <li>Mức lương: Thỏa thuận</li>
+        <li>Được nghỉ CN và các ngày lễ theo quy định của nhà nước</li>
+        <li>Được ký hợp đồng, đóng bảo hiểm và các chế độ khác theo quy định của Nhà nước.</li>
+        <li>Được tham gia các hoạt động khác của công ty: du lịch, liên hoan…</li>
+      </ul>
+      <div class="text-gray-800 text-base mb-2 font-semibold">Địa điểm làm việc</div>
+      <div class="mb-4 text-gray-700 text-sm">Số 1 ngách 193/61 phố Bồ Đề, quận Long Biên, Hà Nội</div>
+      <div class="text-gray-800 text-base mb-2 font-semibold">Cách thức ứng tuyển</div>
+      <div class="mb-4 text-gray-700 text-sm">Điện thoại liên hệ: 0387.547.265 – Ms.Thảo</div>
+      <div class="text-gray-500 text-sm">Hạn nộp hồ sơ: 04/11/2025</div>
+    </div>
+    <!-- Sidebar -->
+    <div class="w-full md:w-80 flex-shrink-0">
+
+      <!-- Modal thông tin liên hệ -->
+<div id="contact-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);align-items:center;justify-content:center;">
+  <div class="relative bg-gradient-to-br from-orange-50 via-white to-orange-100 border-4 border-orange-400 rounded-3xl shadow-2xl p-8 max-w-sm w-full flex flex-col items-center animate-fade-in scale-100 transition-transform duration-300">
+    <button onclick="document.getElementById('contact-modal').style.display='none'" class="absolute top-3 right-3 text-orange-400 hover:text-orange-600 text-3xl font-bold focus:outline-none transition-colors duration-200">&times;</button>
+    <div class="flex flex-col items-center mb-3">
+      <div class="bg-orange-100 border-2 border-orange-400 rounded-full p-3 mb-2 shadow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V8a4 4 0 00-8 0v4m8 0v4a4 4 0 01-8 0v-4" /></svg>
+      </div>
+      <div class="text-2xl font-extrabold text-orange-600 mb-1 drop-shadow">Liên hệ ứng tuyển</div>
+      <div class="text-sm text-gray-500 mb-2">Chúng tôi sẽ hỗ trợ bạn nhanh chóng!</div>
+    </div>
+    <div class="w-full flex flex-col gap-2 text-base">
+      <div class="flex items-center gap-2 text-gray-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>Hotline: <a href="tel:02466599222" class="text-blue-600 hover:underline font-semibold">024 6659 9222</a></div>
+      <div class="flex items-center gap-2 text-gray-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 7.165 6 9.388 6 12v2.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>CSKH: <a href="tel:0387547265" class="text-blue-600 hover:underline font-semibold">0387.547.265 - Mrs.Thảo</a></div>
+      <div class="flex items-center gap-2 text-gray-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636A9 9 0 115.636 18.364 9 9 0 0118.364 5.636z" /></svg>Facebook: <a href="https://www.facebook.com/nguyenan.org" target="_blank" class="text-blue-600 hover:underline font-semibold">facebook.com/nguyenan.org</a></div>
+    </div>
+    <div class="text-gray-400 text-xs mt-4 italic text-center">Cảm ơn bạn đã quan tâm đến Nguyễn An!<br>Chúc bạn một ngày tốt lành.</div>
+  </div>
+</div>
+      <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center mb-6">
+  <img src="../logo/logo.png" alt="Nguyễn AN Logo" style="width:112px;height:112px;object-fit:contain;display:block;margin:0;padding:0;">
+        <div class="font-bold text-lg text-gray-900 mb-1">NGUYỄN AN</div>
+        <div class="text-gray-700 text-sm text-center mb-2">195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- Footer -->
+<footer class="bg-[#fafafa] pt-16 pb-6 mt-0" style="background-image:url('../chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
+    <div class="container mx-auto px-4">
+        <hr class="border-t border-gray-400 mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+            <!-- Logo -->
+            <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+                <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
+                <span class="text-base text-gray-700">NguyenAn.,JSC</span>
+            </div>
+            <!-- Trụ sở chính -->
+            <div>
+            <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
+            <p>195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</p>
+            <p>nguyenanvanhoa@gmail.com</p>
+            </div>
+            <!-- Mạng xã hội -->
+            <div>
+                <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
+                <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+            </div>
+            <!-- Liên hệ -->
+            <div>
+                <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
+                <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
+            </div>
+            <!-- Nút liên hệ -->
+            <div class="flex flex-col items-center md:items-end w-full">
+                <a href="../contact/contact.html"
+                    class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
+                    style="min-width:200px; text-align:center;">Liên hệ Nguyễn An</a>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
+            <div>
+                Chính sách Quyền riêng tư<br>
+                © 2035 bản quyền của Nguyễn An.
+            </div>
+            <a href="../index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+        </div>
+    </div>
+</footer>
+<script src="main.js"></script>

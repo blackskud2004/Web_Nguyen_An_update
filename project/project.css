@@ -1,0 +1,104 @@
+/* Animation đẹp cho project.html */
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in {
+  animation: fade-in 1.2s cubic-bezier(.4,0,.2,1) both;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(80px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.animate-slide-up {
+  animation: slide-up 1.2s cubic-bezier(.4,0,.2,1) both;
+}
+
+@keyframes zoom-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-zoom-in {
+  animation: zoom-in 1s cubic-bezier(.4,0,.2,1) both;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 32px 0 rgba(255, 140, 0, 0.08), 0 1.5px 8px 0 rgba(0,0,0,0.04);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+  background: #fff7ed;
+}
+.project-card:hover {
+  transform: translateY(-12px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 8px 40px 0 rgba(255, 140, 0, 0.18), 0 4px 16px 0 rgba(0,0,0,0.08);
+  z-index: 2;
+}
+.project-card .img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0) 60%,rgba(255,140,0,0.13) 100%);
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border-radius: 1.25rem;
+}
+.project-card:hover .img-overlay {
+  opacity: 0.95;
+}
+.project-card p {
+  position: absolute;
+  left: 0; right: 0; bottom: 1.5rem;
+  text-align: center;
+  color: #ff7300;
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #fff7ed, 0 1px 2px #ffb26b;
+  z-index: 2;
+  transition: color 0.3s;
+}
+.project-card:hover p {
+  color: #fff;
+  text-shadow: 0 2px 12px #ff7300, 0 1px 2px #ffb26b;
+}
+.project-img {
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1), filter 0.5s;
+  filter: grayscale(10%) brightness(0.98);
+}
+.project-card:hover .project-img {
+  transform: scale(1.07) rotate(1deg);
+  filter: grayscale(0%) brightness(1.05) drop-shadow(0 4px 16px #ffb26b44);
+}
+
+/* Divider sóng */
+.wave-divider {
+  width: 100%;
+  height: 32px;
+  background: none;
+  position: relative;
+  margin: 32px 0 40px 0;
+}
+.wave-divider::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 100 10" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 5 Q 25 0 50 5 T 100 5 V 10 H 0 Z" fill="%23ffb26b" fill-opacity="0.5"/></svg>') repeat-x;
+  background-size: 100% 100%;
+  opacity: 0.7;
+}
+
+/* Section xuất hiện */
+.project-section-bg {
+  background: linear-gradient(120deg, #fff7ed 60%, #ffe6c7 100%);
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px 0 rgba(255, 140, 0, 0.06), 0 1.5px 8px 0 rgba(0,0,0,0.03);
+  border: 1.5px solid #ffb26b33;
+  padding: 2.5rem 2rem;
+  animation: fade-in 1.2s 0.2s cubic-bezier(.4,0,.2,1) both;
+}

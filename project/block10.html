@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đền Phù Đổng - Dự án tiêu biểu | Nguyễn An</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Navbar -->
+    <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+        <!-- Logo -->
+       <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+        </div>
+        <!-- Menu -->
+        <div class="flex-1 flex items-center justify-end relative z-10">
+          <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
+            style="position:relative;">
+            <!-- Pattern background for menu only -->
+            <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+              <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
+                style="mix-blend-mode: multiply;" />
+            </div>
+            <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
+            <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
+            <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
+            <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
+            <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
+            <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+          </div>
+        </div>
+    </nav>
+  <br>
+  <div class="container mx-auto py-10 px-2 md:px-8 flex-1">
+    <section class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg border border-orange-100 p-0 overflow-hidden">
+      <img src="../img/dinhkimquan.png" alt="Đình Kim Quan" class="w-full h-[320px] md:h-[420px] object-cover">
+      <div class="p-6 md:p-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-orange-600 mb-2 text-center">Trùng tu Đềnn Trấn Vũ</h1>
+        <div class="text-base text-gray-500 text-center mb-6">Dự án bảo tồn, phục dựng kiến trúc đình cổ, giữ gìn giá trị truyền thống</div>
+        <!-- Divider -->
+        <div class="w-full h-6 mb-8 relative">
+          <svg class="absolute left-0 top-0 w-full h-full" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 0 50 5 T 100 5 V 10 H 0 Z" fill="#ffb26b" fill-opacity="0.5"/></svg>
+        </div>
+        <div class="text-lg text-gray-800 leading-relaxed">
+          <p class="mb-3"><span class="font-bold text-orange-500">Mục tiêu:</span> Bảo tồn, phục dựng kiến trúc đình cổ, giữ gìn giá trị văn hóa truyền thống của địa phương.</p>
+          <p class="mb-4">Dự án tập trung phục dựng các hạng mục chính của đình Kim Quan, sử dụng vật liệu truyền thống kết hợp kỹ thuật hiện đại để đảm bảo bền vững và thẩm mỹ. Công trình góp phần gìn giữ di sản, tạo không gian sinh hoạt cộng đồng cho người dân.</p>
+          <ul class="list-disc pl-6 mb-4 space-y-1">
+            <li>Phục dựng kiến trúc gốc, bảo tồn các chi tiết chạm khắc cổ.</li>
+            <li>Cải tạo cảnh quan, sân vườn và hệ thống chiếu sáng.</li>
+            <li>Tổ chức các hoạt động văn hóa, lễ hội truyền thống tại đình.</li>
+          </ul>
+        </div>
+        <div class="flex justify-center mt-8">
+          <a href="./project.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg shadow transition">← Quay lại danh sách dự án</a>
+        </div>
+      </div>
+    </section>
+  </div>
+ 
+   <!-- Footer -->
+    <footer class="bg-[#fafafa] pt-16 pb-6 mt-0">
+        <div class="container mx-auto px-4">
+            <hr class="border-t border-gray-400 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+                <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+                    <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
+                    <span class="text-base text-gray-700">NguyenAn.,JSC</span>
+                </div>
+                <div>
+                <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
+                <p>195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</p>
+                <p>nguyenanvanhoa@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
+                    <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
+                    <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end w-full">
+                    <a href="../contact/contact.html"
+                        class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
+                        style="min-width:200px; text-align:center;">Liên hệ Nguyễn An</a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
+                <div>
+                    Chính sách Quyền riêng tư<br>
+                    © 2035 bản quyền của Nguyễn An.
+                </div>
+                <a href="../index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="main.js"></script>
