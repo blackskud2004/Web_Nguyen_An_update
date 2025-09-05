@@ -36,12 +36,40 @@
           </div>
         </div>
     </nav>
+
+           <h2 class="text-4xl md:text-5xl font-bold text-orange-500 mb-8 text-center drop-shadow-lg uppercase tracking-widest w-full">Showroom 3D</h2>
             <!-- 3D Model Viewer Section -->
-            <div class="w-full flex flex-col items-center justify-center py-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-orange-500 mb-8 text-center drop-shadow-lg uppercase tracking-widest">Showroom 3D</h2>
-                    <model-viewer src="../3d project/Dau_du.gltf" alt="Dau_du" ar ar-modes="webxr scene-viewer quick-look" environment-image="legacy" exposure="0.2" auto-rotate camera-controls style="width: 600px; height: 400px; background: radial-gradient(circle at 50% 40%, #6b4f2a 0%, #3e2c18 80%, #1a1208 100%); border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.28);"></model-viewer>
-                <p class="mt-4 text-lg text-gray-700">Mô hình 3D: Đầu Dư - Nguyễn An</p>
+        <div class="w-full flex flex-col md:flex-row items-center justify-center py-16 md:pl-30">
+            <!-- Cột thumbnail 3D nhỏ -->
+          <div class="flex flex-col items-center md:items-start md:w-32 w-full mb-8 md:mb-0 md:mr-4 bg-white/80 rounded-2xl shadow-lg p-4 border border-orange-200"
+              style="height: 700px; min-height: 350px; box-sizing: border-box;">
+             <div class="flex flex-row md:flex-col gap-4 w-full md:w-auto h-full">
+                    <button class="thumbnail-3d border-2 border-orange-400 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Dau_du.gltf" data-title="Đầu Dư" data-material="Gỗ" data-origin="Di tích lịch sử Việt Nam" data-desc="Mô hình 3D phục dựng chi tiết đầu dư rồng, thể hiện nghệ thuật điêu khắc đá đặc trưng và giá trị văn hóa lịch sử.">
+                        <img src="../3d picture/Dau_Du.png" alt="Đầu Dư" class="w-20 h-20 object-cover" />
+                    </button>
+                    <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="voi_1.gltf" data-title="Voi đá" data-material="Đá" data-origin="Chùa Kim Liên" data-desc="Mô hình 3D voi đá cổ, điêu khắc tinh xảo, biểu tượng linh vật bảo vệ chùa.">
+                        <img src="../3d picture/Voi_Da.png" alt="Voi đá" class="w-20 h-20 object-cover" />
+                    </button>
+                    <!-- Thêm các thumbnail khác nếu có -->
+                </div>
             </div>
+            <!-- Cột giới thiệu -->
+            <div id="info-col" class="flex flex-col justify-start items-start w-full md:w-64 max-w-full mb-8 md:mb-0 md:mr-4 bg-white/80 rounded-2xl shadow-lg p-4 border border-orange-200"
+                     style="height: 700px; min-height: 350px; box-sizing: border-box;">
+                <h2 class="text-2xl font-bold text-orange-600 mb-4" id="model-title">Giới thiệu mô hình 3D</h2>
+                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Tên mô hình:</span> <span id="model-name">Đầu Dư</span></p>
+                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Chất liệu:</span> <span id="model-material">Gỗ</span></p>
+                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Nguồn gốc:</span> <span id="model-origin">Di tích lịch sử Việt Nam</span></p>
+                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Mô tả:</span> <span id="model-desc">Mô hình 3D phục dựng chi tiết đầu dư rồng, thể hiện nghệ thuật điêu khắc đá đặc trưng và giá trị văn hóa lịch sử.</span></p>
+                <div class="flex-1"></div>
+            </div>
+            <!-- Model viewer lớn -->
+            <div class="flex-shrink-0 flex items-center justify-center mx-auto md:ml-0 md:mr-0">
+                <model-viewer id="main-model-viewer" src="../3d project/Dau_du.gltf" alt="Đầu Dư" ar ar-modes="webxr scene-viewer quick-look" environment-image="legacy" exposure="0.2" auto-rotate camera-controls style="width: 900px; max-width: 95vw; height: 700px; background: radial-gradient(circle at 50% 40%, #6b4f2a 0%, #3e2c18 80%, #1a1208 100%); border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.28); "></model-viewer>
+            </div>
+        </div>
+
+
     <!-- Footer -->
 <footer class="bg-[#fafafa] pt-16 pb-6 mt-0 mt-auto" style="background-image:url('../chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
     <div class="container mx-auto px-4">
@@ -85,6 +113,29 @@
         </div>
     </div>
 </footer>
+
+
+
+
+
 <!-- Google Model Viewer -->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script>
+// Xử lý click thumbnail để đổi model và info
+document.querySelectorAll('.thumbnail-3d').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Đổi model lớn
+        const model = btn.getAttribute('data-model');
+        document.getElementById('main-model-viewer').setAttribute('src', `../3d project/${model}`);
+        // Đổi info
+        document.getElementById('model-name').textContent = btn.getAttribute('data-title');
+        document.getElementById('model-material').textContent = btn.getAttribute('data-material');
+        document.getElementById('model-origin').textContent = btn.getAttribute('data-origin');
+        document.getElementById('model-desc').textContent = btn.getAttribute('data-desc');
+        // Đổi border thumbnail
+        document.querySelectorAll('.thumbnail-3d').forEach(b=>b.classList.remove('border-orange-400','border-2'));
+        btn.classList.add('border-orange-400','border-2');
+    });
+});
+</script>
 <script src="main.js"></script>
