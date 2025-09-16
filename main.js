@@ -1,34 +1,15 @@
 // Tự động scale trang theo tỷ lệ màn hình để tránh lỗi responsive trên các máy tính lạ
-function autoScalePage() {
-  // Tỷ lệ chuẩn là 1440px (hoặc 1920px tuỳ thiết kế gốc)
-  var baseWidth = 1440;
-  var w = window.innerWidth;
-  var scale = w / baseWidth;
-  // Chỉ scale nếu nhỏ hơn 1 (màn hình nhỏ hơn thiết kế)
-  if (scale < 1) {
-    document.body.style.transform = 'scale(' + scale + ')';
-    document.body.style.transformOrigin = 'top left';
-    document.body.style.width = (100/scale) + '%';
-    document.body.style.overflowX = 'auto';
-  } else {
-    document.body.style.transform = '';
-    document.body.style.width = '';
-    document.body.style.overflowX = '';
-  }
-}
-window.addEventListener('DOMContentLoaded', autoScalePage);
-window.addEventListener('resize', autoScalePage);
 // Mobile Menu Toggle
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+}
 
-menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
 
 // Form Submission Handling
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', (e) => {
+if (contactForm) contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -84,3 +65,24 @@ counters.forEach(counter => {
 
     console.log('Width:', width, 'Height:', height);
   });
+
+// Auto-hide update modal if present to avoid blocking clicks on mobile menu
+window.addEventListener('DOMContentLoaded',()=>{const m=document.getElementById('update-modal');if(m){m.style.display='none';}});
+
+
+// Mobile menu close handling
+(function(){
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('mobile-menu-close');
+  if (menu && btn){
+    btn.addEventListener('click', ()=> menu.classList.add('hidden'));
+    // Close on ESC
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') menu.classList.add('hidden');
+    });
+    // Close after clicking a link
+    menu.querySelectorAll('a[href]').forEach(a=>{
+      a.addEventListener('click', ()=> menu.classList.add('hidden'));
+    });
+  }
+})();

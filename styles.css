@@ -204,3 +204,9 @@ nav .menu-link:active {
   }
 }
 
+
+
+@media (max-width: 768px){
+  #clients h2 span{ white-space: normal !important; word-break: break-word; overflow-wrap: anywhere; }
+  #clients .container{ padding-left: 1rem !important; padding-right: 1rem !important; }
+}
