@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +7,46 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
-</head>
+  </head>
 
-<body class="bg-gray-100 font-['Roboto'] min-h-screen flex flex-col">
-    <!-- Navbar -->
+  <body class="bg-gray-100 font-['Roboto'] min-h-screen flex flex-col">
+
+  <!-- Navbar -->
   <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
-        <!-- Logo -->
-        <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
-          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
-          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+    <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+         style="backdrop-filter:none;width:120px;height:120px;padding:0;display:flex;align-items:center;justify-content:center;"
+         onclick="window.location.href='../index.html'">
+      <img src="../logo/logo.png" alt="Nguyen An Logo"
+           style="width:112px;height:112px;object-fit:contain;display:block;margin:0;padding:0;">
+    </div>
+    <div class="flex-1 flex items-center justify-end relative z-10">
+      <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
+           style="position:relative;">
+        <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
+               style="mix-blend-mode:multiply;"/>
         </div>
-        <!-- Menu -->
-        <div class="flex-1 flex items-center justify-end relative z-10">
-          <div class="flex bg-transparent border-4 border-orange-500 text-base md:text-lg relative shadow-lg rounded-xl overflow-hidden"
-            style="position:relative;">
-            <!-- Pattern background for menu only -->
-            <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
-              <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
-                style="mix-blend-mode: multiply;" />
-            </div>
-            <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
-            <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
-            <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
-            <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
-            <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
-            <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
-          </div>
-        </div>
-    </nav>
+        <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
+        <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
+        <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
+        <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
+        <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
+        <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+      </div>
+    </div>
+  </nav>
 
-           <h2 class="text-4xl md:text-5xl font-bold text-orange-500 mb-8 text-center drop-shadow-lg uppercase tracking-widest w-full">Showroom 3D</h2>
+  <h2 class="text-4xl md:text-5xl font-bold text-orange-500 mb-8 text-center drop-shadow-lg uppercase tracking-widest w-full">Showroom 3D</h2>
             <!-- 3D Model Viewer Section -->
         <div class="w-full flex flex-col md:flex-row items-center justify-center py-16 md:pl-30">
             <!-- Cột thumbnail 3D nhỏ -->
           <div class="flex flex-col items-center md:items-start md:w-32 w-full mb-8 md:mb-0 md:mr-4 bg-white/80 rounded-2xl shadow-lg p-4 border border-orange-200"
               style="height: 700px; min-height: 350px; box-sizing: border-box;">
              <div class="flex flex-row md:flex-col gap-4 w-full md:w-auto h-full">
-                    <button class="thumbnail-3d border-2 border-orange-400 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Dau_du.gltf" data-title="Đầu Dư" data-material="Gỗ" data-origin="Di tích lịch sử Việt Nam" data-desc="Mô hình 3D phục dựng chi tiết đầu dư rồng, thể hiện nghệ thuật điêu khắc đá đặc trưng và giá trị văn hóa lịch sử.">
+                    <button class="thumbnail-3d border-2 border-orange-400 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Dau_du.glb" data-title="Đầu Dư" data-material="Gỗ" data-origin="Di tích lịch sử Việt Nam" data-desc="Mô hình 3D phục dựng chi tiết đầu dư rồng, thể hiện nghệ thuật điêu khắc đá đặc trưng và giá trị văn hóa lịch sử.">
                         <img src="../3d picture/Dau_Du.png" alt="Đầu Dư" class="w-20 h-20 object-cover" />
                     </button>
-                    <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="voi_1.gltf" data-title="Voi đá" data-material="Đá" data-origin="Chùa Kim Liên" data-desc="Mô hình 3D voi đá cổ, điêu khắc tinh xảo, biểu tượng linh vật bảo vệ chùa.">
+                    <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="voi_1.glb" data-title="Voi đá" data-material="Đá" data-origin="Chùa Kim Liên" data-desc="Mô hình 3D voi đá cổ, điêu khắc tinh xảo, biểu tượng linh vật bảo vệ chùa.">
                         <img src="../3d picture/Voi_Da.png" alt="Voi đá" class="w-20 h-20 object-cover" />
                     </button>
                     <!-- Thêm các thumbnail khác nếu có -->
@@ -64,87 +63,92 @@
                 <div class="flex-1"></div>
             </div>
             <!-- Model viewer lớn -->
-        <div class="flex-shrink-0 flex items-center justify-center mx-auto md:ml-0 md:mr-0">
-                        
-                <!-- Secure Encrypted Viewer (iframe) -->
-        <div class="rounded-2xl overflow-hidden shadow-lg" style="border: 1px solid rgba(0,0,0,0.1);">
-        <iframe id="secure-viewer"
-            src="http://localhost:8080/viewer.html?auto=1&model=Dau_du.glb"
-            style="width: 100%; height: 520px; border: 0; display:block; background:#0b0e11"
-            allow="xr-spatial-tracking; fullscreen; autoplay">
-        </iframe>
-        </div>
-
-        </div>
+            <div class="flex-shrink-0 flex items-center justify-center mx-auto md:ml-0 md:mr-0">
+                <iframe
+                  id="secure-viewer"
+                  src="/viewer.html?auto=1&compact=1&model=Dau_du.glb"
+                  style="width: 900px; max-width: 95vw; height: 700px; background: radial-gradient(circle at 50% 40%, #6b4f2a 0%, #3e2c18 80%, #1a1208 100%); border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.28); border:0; display:block;"
+                  allow="xr-spatial-tracking; fullscreen; autoplay">
+                </iframe>
+            </div>
         </div>
 
 
-    <!-- Footer -->
-<footer class="bg-[#fafafa] pt-16 pb-6 mt-0 mt-auto" style="background-image:url('../chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
+  <!-- Footer -->
+  <footer class="bg-[#fafafa] pt-16 pb-6 mt-0 mt-auto"
+          style="background-image:url('../chuvan/chuvantrang.png');background-size:cover;background-repeat:no-repeat;background-position:center;">
     <div class="container mx-auto px-4">
-        <hr class="border-t border-gray-400 mb-10">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
-            <!-- Logo -->
-            <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
-                <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
-                <span class="text-base text-gray-700">NguyenAn.,JSC</span>
-            </div>
-            <!-- Trụ sở chính -->
-            <div>
-            <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
-            <p>195 Phố Bồ Đề, Phường Bồ Đề,<br>Quận Long Biên – TP Hà Nội</p>
-            <p>nguyenanvanhoa@gmail.com</p>
-            </div>
-            <!-- Mạng xã hội -->
-            <div>
-                <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
-                <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
-
-            </div>
-            <!-- Liên hệ -->
-            <div>
-                <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
-                <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
-            </div>
-            <!-- Nút liên hệ -->
-            <div class="flex flex-col items-center md:items-end w-full">
-                <a href="../contact/contact.html"
-                    class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
-                    style="min-width:200px; text-align:center;">Liên hệ Nguyễn An</a>
-            </div>
+      <hr class="border-t border-gray-400 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+          <span class="text-3xl font-extrabold mb-1">Nguyễn An</span>
+          <span class="text-base text-gray-700">NguyenAn.,JSC</span>
         </div>
-        <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
-            <div>
-                Chính sách Quyền riêng tư<br>
-                © 2035 bản quyền của Nguyễn An.
-            </div>
-            <a href="../index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Trụ sở chính</h3>
+          <p>195 Phố Bồ Đề, Phường Bồ Đề,<br/>Quận Long Biên – TP Hà Nội</p>
+          <p>nguyenanvanhoa@gmail.com</p>
         </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Mạng xã hội</h3>
+          <p><a href="https://www.facebook.com/nguyenan.org" class="hover:underline">Facebook</a></p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Liên hệ</h3>
+          <p>Nếu có bất kỳ thắc mắc, câu hỏi hoặc nhận xét, vui lòng gọi: 024 6659 9222</p>
+        </div>
+        <div class="flex flex-col items-center md:items-end w-full">
+          <a href="../contact/contact.html"
+             class="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-12 py-4 text-lg mt-6 md:mt-0"
+             style="min-width:200px;text-align:center;">Liên hệ Nguyễn An</a>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center mt-12 text-sm text-gray-700">
+        <div>
+          Chính sách Quyền riêng tư<br/>
+          © 2035 bản quyền của Nguyễn An.
+        </div>
+        <a href="../index.html" class="mt-4 md:mt-0 underline hover:text-orange-500">Về đầu trang</a>
+      </div>
     </div>
-</footer>
+  </footer>
 
+  <!-- JS: xử lý thumbnail + đổi model trong iframe viewer mã hoá -->
+  <script>
+    (function(){
+      const iframe = document.getElementById('secure-viewer');
+      const SRC_BASE = '/viewer.html'; // nhúng trực tiếp viewer qua reverse proxy
 
+      function setModelInIframe(modelName){
+        const url = new URL(SRC_BASE, window.location.origin);
+        url.searchParams.set('auto','1');
+        url.searchParams.set('compact','1'); // keep header hidden when switching models
+        url.searchParams.set('model', modelName);
+        // set src and also ensure the child viewer receives a hideHeader message after it loads
+        iframe.onload = () => {
+          try{ iframe.contentWindow.postMessage('hideHeader', window.location.origin); }catch(e){}
+        };
+        iframe.src = url.toString();
+      }
 
+      document.querySelectorAll('.thumbnail-3d').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const model = btn.getAttribute('data-model'); // ví dụ 'Dau_du.glb'
+          if (model) setModelInIframe(model);
 
+          document.getElementById('model-name').textContent     = btn.getAttribute('data-title')    || '';
+          document.getElementById('model-material').textContent = btn.getAttribute('data-material') || '';
+          document.getElementById('model-origin').textContent   = btn.getAttribute('data-origin')   || '';
+          document.getElementById('model-desc').textContent     = btn.getAttribute('data-desc')     || '';
 
-<!-- Google Model Viewer -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script>
-// Xử lý click thumbnail để đổi model và info
-document.querySelectorAll('.thumbnail-3d').forEach(btn => {
-    btn.addEventListener('click', function() {
-        // Đổi model lớn
-        const model = btn.getAttribute('data-model');
-        document.getElementById('main-model-viewer').setAttribute('src', `../3d project/${model}`);
-        // Đổi info
-        document.getElementById('model-name').textContent = btn.getAttribute('data-title');
-        document.getElementById('model-material').textContent = btn.getAttribute('data-material');
-        document.getElementById('model-origin').textContent = btn.getAttribute('data-origin');
-        document.getElementById('model-desc').textContent = btn.getAttribute('data-desc');
-        // Đổi border thumbnail
-        document.querySelectorAll('.thumbnail-3d').forEach(b=>b.classList.remove('border-orange-400','border-2'));
-        btn.classList.add('border-orange-400','border-2');
-    });
-});
-</script>
-<script src="../main.js"></script>
+          document.querySelectorAll('.thumbnail-3d')
+                  .forEach(b=>b.classList.remove('border-orange-400','border-2'));
+          btn.classList.add('border-orange-400','border-2');
+        });
+      });
+    })();
+  </script>
+
+  <script src="../main.js"></script>
+</body>
+</html>
