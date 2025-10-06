@@ -35,10 +35,7 @@
       <span id="status">No session</span>
     </div>
 
-    <div class="bar">
-      <input id="modelName" type="text" value="Dau_du.glb" />
-      <button id="btnLoad">Load Encrypted Model</button>
-    </div>
+    
 
     <div class="bar">
       <button id="btnPrev">◀ Prev</button>
@@ -99,7 +96,7 @@ const qApi = new URLSearchParams(location.search).get('api');
 const API = window.location.origin;
 
 
-  /* ===== Tham chiếu UI ===== */
+  /* ===== Tham chiếu UI (có thể thiếu khi nhúng compact) ===== */
   const btnSession = document.getElementById('btnSession');
   const statusEl   = document.getElementById('status');
   const nameInput  = document.getElementById('modelName');
@@ -116,9 +113,9 @@ const API = window.location.origin;
   let currentIdx = -1;
 
   function updateNavUI(){
-    btnPrev.disabled = (currentIdx<=0);
-    btnNext.disabled = (currentIdx<0 || currentIdx>=modelNames.length-1);
-    if(currentIdx>=0 && currentIdx<sel.options.length) sel.selectedIndex=currentIdx;
+    if(btnPrev) btnPrev.disabled = (currentIdx<=0);
+    if(btnNext) btnNext.disabled = (currentIdx<0 || currentIdx>=modelNames.length-1);
+    if(sel && currentIdx>=0 && currentIdx<sel.options.length) sel.selectedIndex=currentIdx;
   }
 
   async function refreshModelList(){
@@ -126,9 +123,11 @@ const API = window.location.origin;
     const r = await fetch(`${API}/api/models`, {headers:{Authorization:`Bearer ${token}` }});
     if(!r.ok) { console.error('/api/models', r.status); return; }
     modelNames = await r.json();
-    sel.innerHTML = '';
-    for(const n of modelNames){
-      const opt=document.createElement('option'); opt.value=n; opt.textContent=n; sel.appendChild(opt);
+    if(sel){
+      sel.innerHTML = '';
+      for(const n of modelNames){
+        const opt=document.createElement('option'); opt.value=n; opt.textContent=n; sel.appendChild(opt);
+      }
     }
     const want=(nameInput?.value||'').trim();
     const idx=modelNames.findIndex(n=>n===want);
@@ -249,6 +248,9 @@ const API = window.location.origin;
       plainOff += dec.length;
     }
 
+    // notify parent that decryption finished (blob ready)
+    try{ window.parent.postMessage('viewer:decrypted', window.location.origin); }catch(e){}
+
     return new Blob([plain], {type:'model/gltf-binary'});
   }
 
@@ -263,6 +265,8 @@ const API = window.location.origin;
       currentObject = gltf.scene;
       scene.add(currentObject);
       fitCameraToObject(currentObject);
+      // notify parent that the model has been added and is visually ready
+      try{ window.parent.postMessage('viewer:modelReady', window.location.origin); }catch(e){}
     }catch(e){
       console.error(e);
       alert('Load failed: ' + e.message);
@@ -270,9 +274,10 @@ const API = window.location.origin;
   }
 
   /* ===== Session & điều hướng ===== */
-  btnSession.onclick = async () => {
+  // Extract session creation so we can call it even if UI elements are missing
+  async function createSession(){
     const r = await fetch(`${API}/api/session`, {method:'POST'});
-    if(!r.ok){ alert('Create session failed'); return; }
+    if(!r.ok){ if(statusEl) statusEl.textContent='Create session failed'; return; }
     const j = await r.json();
 
     token = j.token || j.accessToken || j.id || null;
@@ -295,28 +300,29 @@ const API = window.location.origin;
       (j.expiration ? Date.parse(j.expiration) : null);
 
     const when = expMs ? new Date(expMs).toLocaleTimeString() : 'unknown';
-    statusEl.textContent = `Session OK${expMs ? ` (expires ${when})` : ''}`;
+    if(statusEl) statusEl.textContent = `Session OK${expMs ? ` (expires ${when})` : ''}`;
 
     await refreshModelList();
-  };
+  }
+  if(btnSession) btnSession.onclick = createSession;
 
-  btnLoad.onclick = async () => {
+  if(btnLoad) btnLoad.onclick = async () => {
     const typed=(nameInput?.value||'').trim();
     const idx=modelNames.findIndex(n=>n===typed);
     if(idx>=0) currentIdx=idx;
-    const target = (sel.value || typed);
+    const target = ((sel && sel.value) || typed);
     if(target) await loadEncrypted(target);
     updateNavUI();
   };
 
-  btnPrev.addEventListener('click', ()=>goTo(currentIdx-1));
-  btnNext.addEventListener('click', ()=>goTo(currentIdx+1));
-  sel.addEventListener('change', ()=>goTo(sel.selectedIndex));
+  if(btnPrev) btnPrev.addEventListener('click', ()=>goTo(currentIdx-1));
+  if(btnNext) btnNext.addEventListener('click', ()=>goTo(currentIdx+1));
+  if(sel) sel.addEventListener('change', ()=>goTo(sel.selectedIndex));
 
   /* ===== Auto init ===== */
   window.addEventListener('DOMContentLoaded', async ()=>{
     // tự tạo session để có list
-    await btnSession.onclick();
+    await createSession();
     // auto model qua query ?model=...
     const q=new URLSearchParams(location.search);
     const m=q.get('model');

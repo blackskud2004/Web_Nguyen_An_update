@@ -1,0 +1,28 @@
+{
+  "size": 20673224,
+  "chunkSize": 1048576,
+  "ivs": [
+    "GSH56+ci6fg8BqAQ",
+    "cVXYcZrtzC0OkMOP",
+    "7CQvrbJH6op7+wFh",
+    "SJVF7tVi27xTFgUe",
+    "OihUMH+rYi81jESO",
+    "spFeEoXQF+a2wEOr",
+    "vA5TcYcc3kYfYNl/",
+    "xP7O0TPEc2URm4gw",
+    "p8r/5pulPR0G/QEr",
+    "yBFtPn2uvsly7Uk3",
+    "fKK0Pwv9M9qtYPV0",
+    "rXr7DTO1+CddicYZ",
+    "ZK1xWobB8f+xqHi3",
+    "7kUxs/vVPA5JPeFs",
+    "QMTcD+WiuULEn88R",
+    "V4ur3rpIunjntVu3",
+    "IYA+TZh+Tg9SkYxp",
+    "o1K4Z3GQS9wi6l8Z",
+    "a7xgvsdpWSt26cRI",
+    "rv6N5bviNTJe0/UE"
+  ],
+  "tagPerChunk": 16,
+  "layout": "enc+tag"
+}

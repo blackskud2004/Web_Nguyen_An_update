@@ -1,0 +1,25 @@
+{
+  "size": 17295676,
+  "chunkSize": 1048576,
+  "ivs": [
+    "JKVHYIqdFfBeBQc9",
+    "j0QyEz0eOB5pFI2R",
+    "yOl5FDeLyyMo0tMF",
+    "yMaihLTKsfUCdmvl",
+    "d1M7hBP3Av3x1cgY",
+    "hw6gBjI7SxjTGUM2",
+    "Z1nDvn6ltGkzPmqq",
+    "FcTaDMtzFZBF4mqo",
+    "ScPCQw/9/680kPzu",
+    "GMY56WA1FnvLsrBY",
+    "ZxV85JDmpgD+laGf",
+    "349ntBUEpb6xkcKM",
+    "b2j+QzYp1EYaxy9b",
+    "HInnMDjytpTI8Kzf",
+    "uqHNSC1RcmLcl0hl",
+    "5/QL9Q490Uq4o2Vo",
+    "l3mgTyBLe5uaSCzB"
+  ],
+  "tagPerChunk": 16,
+  "layout": "enc+tag"
+}

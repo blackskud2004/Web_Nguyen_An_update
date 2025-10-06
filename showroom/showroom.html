@@ -42,31 +42,50 @@
             <!-- Cột thumbnail 3D nhỏ -->
           <div class="flex flex-col items-center md:items-start md:w-32 w-full mb-8 md:mb-0 md:mr-4 bg-white/80 rounded-2xl shadow-lg p-4 border border-orange-200"
               style="height: 700px; min-height: 350px; box-sizing: border-box;">
-             <div class="flex flex-row md:flex-col gap-4 w-full md:w-auto h-full">
-                    <button class="thumbnail-3d border-2 border-orange-400 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Dau_du.glb" data-title="Đầu Dư" data-material="Gỗ" data-origin="Di tích lịch sử Việt Nam" data-desc="Mô hình 3D phục dựng chi tiết đầu dư rồng, thể hiện nghệ thuật điêu khắc đá đặc trưng và giá trị văn hóa lịch sử.">
-                        <img src="../3d picture/Dau_Du.png" alt="Đầu Dư" class="w-20 h-20 object-cover" />
-                    </button>
-                    <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="voi_1.glb" data-title="Voi đá" data-material="Đá" data-origin="Chùa Kim Liên" data-desc="Mô hình 3D voi đá cổ, điêu khắc tinh xảo, biểu tượng linh vật bảo vệ chùa.">
-                        <img src="../3d picture/Voi_Da.png" alt="Voi đá" class="w-20 h-20 object-cover" />
-                    </button>
-                    <!-- Thêm các thumbnail khác nếu có -->
-                </div>
+        <div class="flex flex-row md:flex-col gap-4 w-full md:w-auto h-full">
+      
+          <!-- New uploaded models -->
+          <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Bai_vi.glb" data-title="Bài vị" data-material="Gỗ Phủ Sơn" data-origin="Thế Kỉ 18" data-desc="Bài vị truyền thống, phục dựng chi tiết văn tự và hoa văn." >
+            <img src="../3d picture/Bai_vi.jpg" alt="Bài vị" class="w-20 h-20 object-cover" />
+          </button>
+          <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Ghe_tho.glb" data-title="Ngai thờ" data-material="Gỗ Phủ Sơn" data-origin=" Thời Lê Trung Hưng-Thế Kỉ 18" data-desc="Ghế thờ chạm khắc tinh xảo, mô phỏng kiểu truyền thống." >
+            <img src="../3d picture/Ghe_tho.jpg" alt="Ghế thờ" class="w-20 h-20 object-cover" />
+          </button>
+          <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Nghe_thoi_Le.glb" data-title="Nghê thời Lê" data-material="Gỗ Phủ Sơn" data-origin="Thời Lê Trung Hưng-Thế Kỉ 18" data-desc="Tượng nghê thời Lê, phục dựng chi tiết nghệ thuật điêu khắc." >
+            <img src="../3d picture/Nghe_thoi_Le.jpg" alt="Nghê thời Lê" class="w-20 h-20 object-cover" />
+          </button>
+          <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Tuong.glb" data-title="Tượng Văn Thù Bồ Tát" data-material="Đất Phủ Sơn" data-origin="Thế Kỉ 19" data-desc="Tượng phong cách cổ, phục dựng chi tiết." >
+            <img src="../3d picture/Tuong.jpg" alt="Tượng" class="w-20 h-20 object-cover" />
+          </button>
+          <button class="thumbnail-3d border-2 border-gray-300 rounded-xl overflow-hidden focus:ring-2 ring-orange-500 transition" data-model="Van_gio.glb" data-title="Mảng Chạm Ván Gió Tiền Mái" data-material="Gỗ Lim" data-origin="Thời Lê Trung Hưng-Thế Kỉ 17" data-desc="Hoa văn vân gió truyền thống." >
+            <img src="../3d picture/Van_gio.jpg" alt="Vân gió" class="w-20 h-20 object-cover" />
+          </button>
+        </div>
             </div>
             <!-- Cột giới thiệu -->
             <div id="info-col" class="flex flex-col justify-start items-start w-full md:w-64 max-w-full mb-8 md:mb-0 md:mr-4 bg-white/80 rounded-2xl shadow-lg p-4 border border-orange-200"
                      style="height: 700px; min-height: 350px; box-sizing: border-box;">
                 <h2 class="text-2xl font-bold text-orange-600 mb-4" id="model-title">Giới thiệu mô hình 3D</h2>
-                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Tên mô hình:</span> <span id="model-name">Đầu Dư</span></p>
-                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Chất liệu:</span> <span id="model-material">Gỗ</span></p>
-                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Nguồn gốc:</span> <span id="model-origin">Di tích lịch sử Việt Nam</span></p>
-                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Mô tả:</span> <span id="model-desc">Mô hình 3D phục dựng chi tiết đầu dư rồng, thể hiện nghệ thuật điêu khắc đá đặc trưng và giá trị văn hóa lịch sử.</span></p>
+                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Tên mô hình:</span> <span id="model-name">Bài Vị </span></p>
+                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Chất liệu:</span> <span id="model-material">Gỗ Phủ Sơn</span></p>
+                <p class="text-base text-gray-800 mb-2"><span class="font-semibold">Nguồn gốc:</span> <span id="model-origin">Thế Kỉ 18</span></p>
+    
                 <div class="flex-1"></div>
             </div>
             <!-- Model viewer lớn -->
-            <div class="flex-shrink-0 flex items-center justify-center mx-auto md:ml-0 md:mr-0">
+            <div class="flex-shrink-0 flex items-center justify-center mx-auto md:ml-0 md:mr-0 relative" id="viewer-wrapper">
+                <!-- loader overlay (mặc định ẩn) -->
+                <div id="viewer-loader" class="absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center rounded-xl z-40 hidden">
+                    <svg class="animate-spin h-12 w-12 text-white mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                    </svg>
+                    <div class="text-white text-lg font-semibold">Loading…</div>
+                </div>
+
                 <iframe
                   id="secure-viewer"
-                  src="/viewer.html?auto=1&compact=1&model=Dau_du.glb"
+                  src="/viewer.html?auto=1&compact=1&model=Bai_vi.glb"
                   style="width: 900px; max-width: 95vw; height: 700px; background: radial-gradient(circle at 50% 40%, #6b4f2a 0%, #3e2c18 80%, #1a1208 100%); border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.28); border:0; display:block;"
                   allow="xr-spatial-tracking; fullscreen; autoplay">
                 </iframe>
@@ -117,9 +136,25 @@
   <script>
     (function(){
       const iframe = document.getElementById('secure-viewer');
+      const loader = document.getElementById('viewer-loader');
       const SRC_BASE = '/viewer.html'; // nhúng trực tiếp viewer qua reverse proxy
+      let hideFallbackTimer = null;
+
+      function showLoader(){
+        if(hideFallbackTimer){ clearTimeout(hideFallbackTimer); hideFallbackTimer = null; }
+        loader.classList.remove('hidden');
+        // fallback: tự ẩn sau 25s phòng trường hợp iframe không gửi message
+        hideFallbackTimer = setTimeout(()=> { hideLoader(); }, 25000);
+      }
+      function hideLoader(){
+        if(hideFallbackTimer){ clearTimeout(hideFallbackTimer); hideFallbackTimer = null; }
+        loader.classList.add('hidden');
+      }
 
       function setModelInIframe(modelName){
+        // show loader ngay khi bắt đầu đổi model (chờ decrypt)
+        showLoader();
+
         const url = new URL(SRC_BASE, window.location.origin);
         url.searchParams.set('auto','1');
         url.searchParams.set('compact','1'); // keep header hidden when switching models
@@ -131,6 +166,17 @@
         iframe.src = url.toString();
       }
 
+      // lắng nghe message từ iframe viewer
+      window.addEventListener('message', (ev) => {
+        // chỉ nhận message từ cùng origin
+        if(ev.origin !== window.location.origin) return;
+        const m = ev.data;
+        if(m === 'viewer:decrypted' || m === 'viewer:modelReady' || m === 'viewer:loaded'){
+          // viewer báo đã giải mã xong / sẵn sàng -> ẩn loader
+          hideLoader();
+        }
+      }, false);
+
       document.querySelectorAll('.thumbnail-3d').forEach(btn => {
         btn.addEventListener('click', () => {
           const model = btn.getAttribute('data-model'); // ví dụ 'Dau_du.glb'
@@ -139,13 +185,20 @@
           document.getElementById('model-name').textContent     = btn.getAttribute('data-title')    || '';
           document.getElementById('model-material').textContent = btn.getAttribute('data-material') || '';
           document.getElementById('model-origin').textContent   = btn.getAttribute('data-origin')   || '';
-          document.getElementById('model-desc').textContent     = btn.getAttribute('data-desc')     || '';
+          //document.getElementById('model-desc').textContent     = btn.getAttribute('data-desc')     || '';
 
           document.querySelectorAll('.thumbnail-3d')
                   .forEach(b=>b.classList.remove('border-orange-400','border-2'));
           btn.classList.add('border-orange-400','border-2');
         });
       });
+
+      // nếu iframe đã load lần đầu (khi mở trang), hiển thị loader cho lần load initial
+      // và chờ message từ iframe để ẩn
+      showLoader();
+
+      // cuối cùng: ẩn loader khi trang unload
+      window.addEventListener('beforeunload', ()=> hideLoader());
     })();
   </script>
 
