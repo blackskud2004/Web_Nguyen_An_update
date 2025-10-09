@@ -55,9 +55,9 @@ app.use(
           "https://cdn.tailwindcss.com",
           "https://unpkg.com"
         ],
-        "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-        "style-src-elem": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-        "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
+      "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com", "https://cdn.jsdelivr.net", "https://cdn.tailwindcss.com"],
+      "style-src-elem": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com", "https://cdn.jsdelivr.net", "https://cdn.tailwindcss.com"],
+  "font-src": ["'self'", "https://fonts.gstatic.com", "data:", "https://cdnjs.cloudflare.com"],
         "img-src": ["'self'", "data:", "blob:"],
         "connect-src": ["'self'", "blob:", "data:"],
         "worker-src": ["'self'", "blob:"],
