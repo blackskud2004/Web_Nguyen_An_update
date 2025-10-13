@@ -11,12 +11,27 @@
 </head>
 
 <body class="bg-gray-100 font-['Roboto']">
-    <!-- Navbar -->
-  <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+   <!-- Navbar -->
+      <!-- Mobile header: logo left + hamburger (only visible on small screens) -->
+      <div class="container mx-auto flex items-center justify-between py-2 md:py-4 relative z-20">
+        <div class="flex items-center md:hidden w-full justify-between">
+          <!-- Mobile logo (left) -->
+          <div id="mobile-logo" class="flex items-center border-4 border-orange-500 px-2 py-2 bg-transparent cursor-pointer shadow-lg rounded-xl"
+          style="backdrop-filter: none; width: 100px; height: 100px; padding: 0; display: flex; align-items: center; justify-content: center;" data-href="../index.html">
+            <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+          </div>
+          <!-- Hamburger toggle (right) -->
+          <button id="menu-toggle" aria-label="Open menu" class="p-2 bg-black/10 rounded-md focus:ring-2 focus:ring-orange-600">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="container mx-auto hidden md:flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
         <!-- Logo -->
-       <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
+        <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
           style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" data-href="../index.html">
-          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
+          <img src="../logo/logo.png" alt="Nguyen An Logo" style="width: 182px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
         </div>
         <!-- Menu -->
         <div class="flex-1 flex items-center justify-end relative z-10">
@@ -27,15 +42,41 @@
               <img src="../chuvan/chuvanden.png" alt="Hoa văn navbar" class="w-full h-full object-cover opacity-25"
                 style="mix-blend-mode: multiply;" />
             </div>
-            <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
+
+	
+	        <a href="../index.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline">Về Trang Chủ</a>
             <a href="../introduce/introduce.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Giới thiệu</a>
             <a href="../project/project.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Dự án</a>
             <a href="../showroom/showroom.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Showroom</a>
             <a href="../recruitment/recruitment.html" class="menu-link px-7 py-4 text-orange-500 font-semibold hover:underline relative z-10">Tuyển dụng</a>
-            <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
+           <a href="../contact/contact.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white font-bold px-7 py-4 relative z-10">Liên Hệ</a>
           </div>
         </div>
-    </nav>
+      </nav>
+
+            <!-- Mobile dropdown menu (top-level, hidden by default) -->
+      <div id="mobile-menu" class="fixed inset-0 z-50 hidden md:hidden" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="overlay-strong"></div>
+        <div class="absolute top-0 left-0 w-full bg-white p-6 shadow-lg" style="height:100vh;overflow:auto;position:relative;z-index:60;">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <img src="../logo/logo.png" alt="Nguyen An Logo" style="width:56px;height:56px;object-fit:contain;display:block;margin-right:12px;">
+              <span class="text-lg font-bold text-orange-500">Nguyễn An</span>
+            </div>
+            <button id="mobile-menu-close" aria-label="Close menu" class="text-2xl font-bold text-gray-700">&times;</button>
+          </div>
+          <nav class="flex flex-col gap-4 text-lg">
+
+	        <a href="../index.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Về Trang Chủ</a>
+            <a href="../introduce/introduce.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Giới thiệu</a>
+            <a href="../project/project.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Dự án</a>
+            <a href="../showroom/showroom.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Showroom</a>
+            <a href="../recruitment/recruitment.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Tuyển dụng</a>
+            <a href="../contact/contact.html" class="block p-3 bg-orange-500 text-white rounded font-bold text-center">Liên Hệ</a>
+          </nav>
+        </div>
+      </div>
+
     <!-- Section quy trình làm việc-->
     <section class="relative w-full bg-gradient-to-r from-orange-50 to-white py-16 mb-20 overflow-x-hidden">
         <div class="absolute left-0 top-0 h-full w-24 hidden md:block z-0">

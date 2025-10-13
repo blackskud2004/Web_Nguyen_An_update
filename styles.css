@@ -89,6 +89,28 @@ body {
     font-size: 0.9rem;
   }
 }
+/* Mobile menu panel overrides */
+@media (max-width: 768px) {
+  #mobile-menu > div { /* the inner white panel */
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  #mobile-menu nav a { border-bottom: 1px solid rgba(0,0,0,0.04); }
+}
+/* lock body when menu open to prevent background bleed-through */
+body.menu-open { overflow: hidden; height: 100vh; }
+/* make sure inner panel sits above overlay */
+#mobile-menu .shadow-lg { z-index: 60; position: relative; }
+
+/* stronger overlay to completely hide header background */
+#mobile-menu .overlay-strong { background: rgba(0,0,0,0.95); position: absolute; inset: 0; z-index:50; }
+
+/* helper to hide hero/header while mobile menu is open */
+.hidden-by-menu { display: none !important; visibility: hidden !important; }
+/* While menu is open, prevent any pointer interaction on the page except the menu itself */
+body.menu-open * { pointer-events: none !important; }
+body.menu-open #mobile-menu, body.menu-open #mobile-menu * { pointer-events: auto !important; }
 /* Navbar menu hover effect */
 nav .menu-link {
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;

@@ -12,7 +12,8 @@
   <meta name="google-site-verification" content="hk8J2VVQF7oOxQaUpj6seD1rtct3HYaN8uUjg0M7dxs"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="logo.png" type="image/png" href="/logo/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Use local Font Awesome to avoid CSP issues; place files under /vendor/fontawesome/ -->
+  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
 
 </head>
 
@@ -20,7 +21,7 @@
   <!-- Modal thông báo update -->
   <div id="update-modal" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;">
     <div style="background:white;padding:2.5rem 2rem 2rem 2rem;border-radius:1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.18);max-width:90vw;min-width:320px;text-align:center;position:relative;">
-      <button onclick="document.getElementById('update-modal').style.display='none'" style="position:absolute;top:0.5rem;right:0.7rem;font-size:2rem;color:#ff7300;background:none;border:none;cursor:pointer;line-height:1;">&times;</button>
+  <button data-close-modal="update-modal" style="position:absolute;top:0.5rem;right:0.7rem;font-size:2rem;color:#ff7300;background:none;border:none;cursor:pointer;line-height:1;">&times;</button>
       <div style="font-size:2rem;font-weight:700;color:#ff7300;margin-bottom:1rem;">Thông báo</div>
       <div style="font-size:1.2rem;color:#333;">Website đang trong quá trình <b>update</b>.<br>Kính mong quý khách thông cảm!</div>
     </div>
@@ -31,10 +32,25 @@
     <img src="img/Den_Phu_Dong_5.png"  class="absolute inset-0 w-full h-full object-cover z-0"> 
     <div class="relative z-10 w-full pt-8 md:pt-12 lg:pt-16">
       <!-- Navbar moved inside hero -->
-      <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
+      <!-- Mobile header: logo left + hamburger (only visible on small screens) -->
+      <div class="container mx-auto flex items-center justify-between py-2 md:py-4 relative z-20">
+        <div class="flex items-center md:hidden w-full justify-between">
+          <!-- Mobile logo (left) -->
+          <div id="mobile-logo" class="flex items-center border-4 border-orange-500 px-2 py-2 bg-transparent cursor-pointer shadow-lg rounded-xl"
+            style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;" data-href="../index.html">
+            <img src="logo/logo.png" alt="Nguyen An Logo" style="width:56px;height:56px;object-fit:contain;display:block;margin:0;padding:0;">
+          </div>
+          <!-- Hamburger toggle (right) -->
+          <button id="menu-toggle" aria-label="Open menu" class="p-2 bg-white/10 rounded-md focus:ring-2 focus:ring-orange-400">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="container mx-auto hidden md:flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
         <!-- Logo -->
         <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
-          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" data-href="../index.html">
           <img src="logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
         </div>
         <!-- Menu -->
@@ -55,7 +71,9 @@
           </div>
         </div>
       </nav>
-      </div>
+
+
+       </div>
     <div class="container mx-auto px-4 text-center relative z-10 flex-1 flex flex-col justify-center items-start">
       <h1
         class="text-left w-full max-w-5xl font-extrabold leading-tight mb-4 drop-shadow-lg text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[3vw]">
@@ -75,6 +93,27 @@
     </div>
     <div class="absolute inset-0 bg-black/40 z-0"></div>
   </section>
+              <!-- Mobile dropdown menu (top-level, hidden by default) -->
+      <div id="mobile-menu" class="fixed inset-0 z-50 hidden md:hidden" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="overlay-strong"></div>
+        <div class="absolute top-0 left-0 w-full bg-white p-6 shadow-lg" style="height:100vh;overflow:auto;position:relative;z-index:60;">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <img src="logo/logo.png" alt="Nguyen An Logo" style="width:56px;height:56px;object-fit:contain;display:block;margin-right:12px;">
+              <span class="text-lg font-bold text-orange-500">Nguyễn An</span>
+            </div>
+            <button id="mobile-menu-close" aria-label="Close menu" class="text-2xl font-bold text-gray-700">&times;</button>
+          </div>
+          <nav class="flex flex-col gap-4 text-lg">
+            <a href="introduce/introduce.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Giới thiệu</a>
+            <a href="project/project.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Dự án</a>
+            <a href="#services-overview" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Dịch vụ</a>
+            <a href="showroom/showroom.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Showroom</a>
+            <a href="recruitment/recruitment.html" class="block p-3 text-gray-800 rounded hover:bg-orange-50">Tuyển dụng</a>
+            <a href="contact/contact.html" class="block p-3 bg-orange-500 text-white rounded font-bold text-center">Liên Hệ</a>
+          </nav>
+        </div>
+      </div>
 
   <!-- Services Section -->
   <section id="services" class="py-10 bg-white">
@@ -418,6 +457,7 @@
   </footer>
 
    <script src="main.js"></script>
+
   <script>
 
     // Counter animation for project stats
