@@ -12,8 +12,7 @@
   <meta name="google-site-verification" content="hk8J2VVQF7oOxQaUpj6seD1rtct3HYaN8uUjg0M7dxs"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="logo.png" type="image/png" href="/logo/logo.png">
-  <!-- Use local Font Awesome to avoid CSP issues; place files under /vendor/fontawesome/ -->
-  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 
@@ -21,7 +20,7 @@
   <!-- Modal thông báo update -->
   <div id="update-modal" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;">
     <div style="background:white;padding:2.5rem 2rem 2rem 2rem;border-radius:1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.18);max-width:90vw;min-width:320px;text-align:center;position:relative;">
-  <button data-close-modal="update-modal" style="position:absolute;top:0.5rem;right:0.7rem;font-size:2rem;color:#ff7300;background:none;border:none;cursor:pointer;line-height:1;">&times;</button>
+      <button onclick="document.getElementById('update-modal').style.display='none'" style="position:absolute;top:0.5rem;right:0.7rem;font-size:2rem;color:#ff7300;background:none;border:none;cursor:pointer;line-height:1;">&times;</button>
       <div style="font-size:2rem;font-weight:700;color:#ff7300;margin-bottom:1rem;">Thông báo</div>
       <div style="font-size:1.2rem;color:#333;">Website đang trong quá trình <b>update</b>.<br>Kính mong quý khách thông cảm!</div>
     </div>
@@ -35,7 +34,7 @@
       <nav class="container mx-auto flex items-center justify-end py-4 md:py-6 relative overflow-hidden rounded-xl">
         <!-- Logo -->
         <div class="flex flex-col items-center border-4 border-orange-500 px-2 py-2 mr-6 bg-transparent cursor-pointer shadow-lg rounded-xl relative z-10"
-          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" data-href="../index.html">
+          style="backdrop-filter: none; width: 120px; height: 120px; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="window.location.href='../index.html'">
           <img src="logo/logo.png" alt="Nguyen An Logo" style="width: 112px; height: 112px; object-fit: contain; display: block; margin: 0; padding: 0;">
         </div>
         <!-- Menu -->
