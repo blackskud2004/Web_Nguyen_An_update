@@ -76,8 +76,9 @@
 
     <!-- Main Content -->
     <main class="mt-24 px-0">
-        <!-- Large Image -->
-        <img src="../img/Den_Giong_2.jpg" alt="Công trình xây dựng" class="w-full max-w-[1550px] h-[670px] object-cover rounded-xl shadow-lg mb-8 mx-auto">
+  <!-- Large Image -->
+  <!-- Show full image on mobile (no cropping) using object-contain and auto height; keep original fixed height and object-cover on md+ -->
+  <img src="../img/Den_Giong_2.jpg" alt="Công trình xây dựng" class="w-full max-w-[1550px] h-auto object-contain md:h-[670px] md:object-cover rounded-xl shadow-lg mb-8 mx-auto">
         <!-- Content of Large Image -->
         <section class="w-full max-w-[1200px] mx-auto px-8">
             <p class="text-2xl mb-4 ml-2">Giới thiệu</p>
@@ -245,12 +246,13 @@
         <!-- Section company chart -->
         <section class="w-full max-w-3xl mx-auto mb-24 px-4">
             <h2 class="text-4xl font-extrabold text-orange-500 mb-8 text-center">Sơ đồ tổ chức công ty</h2>
-            <div class="relative w-full flex items-center justify-center" style="min-height:600px;">
-                <img src="../background/cot_rong.png" alt="Cột rồng trái" class="hidden md:block absolute top-1/2 -translate-y-1/2 object-contain select-none z-30" style="height:600px; width:auto; left:-500px;">
-                <div class="flex justify-center items-center w-full" style="padding-left:100px; padding-right:100px;">
-                <img src="../img/company_chart.png" alt="Sơ đồ tổ chức công ty" class="w-full rounded-xl shadow-lg border border-gray-200 z-10 mx-auto" style="max-width:2000px; height:600px; object-fit:contain;">
+            <div class="relative w-full flex items-center justify-center py-8">
+                <img src="../background/cot_rong.png" alt="Cột rồng trái" class="hidden md:block absolute top-1/2 -translate-y-1/2 object-contain select-none z-30" style="height:520px; width:auto; left:-420px;">
+                <div class="flex justify-center items-center w-full px-8">
+                  <!-- Make the chart wider (max-w) and allow height to auto-adjust; use object-contain so it doesn't stretch -->
+                  <img src="../img/company_chart.png" alt="Sơ đồ tổ chức công ty" class="w-full max-w-4xl rounded-xl shadow-lg border border-gray-200 z-10 mx-auto object-contain" style="height:auto;">
                 </div>
-                <img src="../background/cot_rong.png" alt="Cột rồng phải" class="hidden md:block absolute top-1/2 -translate-y-1/2 object-contain select-none z-30" style="height:600px; width:auto; right:-500px;">
+                <img src="../background/cot_rong.png" alt="Cột rồng phải" class="hidden md:block absolute top-1/2 -translate-y-1/2 object-contain select-none z-30" style="height:520px; width:auto; right:-420px;">
             </div>
         </section>
 
