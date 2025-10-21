@@ -91,7 +91,7 @@
         <a href="project/project.html" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-xl">Xem dự án</a>
       </div>
     </div>
-    <div class="absolute inset-0 bg-black/40 z-0"></div>
+    <div class="absolute inset-0 bg-black/40 z-0"></div>      
   </section>
               <!-- Mobile dropdown menu (top-level, hidden by default) -->
       <div id="mobile-menu" class="fixed inset-0 z-50 hidden md:hidden" role="dialog" aria-modal="true" aria-hidden="true">
@@ -151,13 +151,13 @@
           <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
             <img src="img/dinhtinhquang1.png"
               alt="anh1"
-              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+              class="w-full h-auto md:h-[500px] lg:h-[650px] object-contain md:object-cover rounded-none shadow-none lg:rounded-l-3xl">
           </div>
         </div>
       </div>
       <!-- Button for mobile, show below image -->
       <div class="w-full flex justify-end mt-4 lg:hidden">
-        <a href="#"
+        <a href="../introduce/introduce.html"
           class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-lg rounded-none shadow transition-all duration-200">Đọc
           thêm</a>
       </div>
@@ -180,7 +180,7 @@
           <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
             <img src="img/chuavanphuc.png"
               alt="anh2"
-              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+              class="w-full h-auto md:h-[500px] lg:h-[650px] object-contain md:object-cover rounded-none shadow-none lg:rounded-l-3xl">
           </div>
         </div>
       </div>
@@ -206,7 +206,7 @@
           <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
             <img src="img/denmauauco(bl2).png"
               alt="anh3"
-              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+              class="w-full h-auto md:h-[500px] lg:h-[650px] object-contain md:object-cover rounded-none shadow-none lg:rounded-l-3xl">
           </div>
         </div>
       </div>
@@ -231,7 +231,7 @@
           <div class="flex-1 lg:basis-7/12 flex justify-end items-stretch h-full relative">
             <img src="img/dinhchualamdu(bl9).png"
               alt="anh4"
-              class="w-full h-[500px] lg:h-[650px] object-cover rounded-none shadow-none lg:rounded-l-3xl">
+              class="w-full h-auto md:h-[500px] lg:h-[650px] object-contain md:object-cover rounded-none shadow-none lg:rounded-l-3xl">
           </div>
         </div>     
       </div>     
@@ -253,32 +253,36 @@
         <p class="mb-8 text-base md:text-2xl font-light max-w-xl">Hoạt động trong lĩnh vực xây dựng nhưng Công ty cổ phần Nguyễn An lựa chọn công việc đặc thù, đó là khôi phục và bảo tồn
         di tích lịch sử. Chúng tôi chọn tên Nguyễn An để tưởng nhớ kiến trúc sư tài ba, người Việt Nam là tổng công trình sư
         trong việc xây dựng Cố Cung (Tử Cấm Thành). Đây là công trình kiến trúc nổi tiếng thế giới.</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
           <div class="flex flex-col items-center md:items-start">
-            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="2008">0</span>
-            <span class="text-base mt-1">Năm thành lập</span>
-            <span class="block w-8 h-0.5 bg-white mt-2"></span>
-          </div>
-          <div>
-            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="1000"> 0</span>
-            <span class="text-5xl">+</span>
-            <div>
-            <span class="text-base mt-1">Dự án đã hoàn thành</span>
-            </div>
-            <span class="block w-8 h-0.5 bg-white mt-2"></span>   
-           </div>
-          <div>
-            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="300 ">0</span>
-            <span class="text-5xl">+</span>
-            <div>
-              <span class="text-base mt-1">Chuyên viên</span>
-            </div>
-            <span class="block w-8 h-0.5 bg-white mt-2"></span>
+            <span class="project-counter text-2xl md:text-5xl font-extrabold" data-target="2008">0</span>
+            <span class="text-sm md:text-base mt-1">Năm thành lập</span>
+            <span class="block w-6 md:w-8 h-0.5 bg-white mt-2"></span>
           </div>
           <div class="flex flex-col items-center md:items-start">
-            <span class="project-counter text-4xl md:text-5xl font-extrabold" data-target="80">0</span>
-            <span class="text-base mt-1">Đối tác kinh doanh</span>
-            <span class="block w-8 h-0.5 bg-white mt-2"></span>
+            <div class="flex items-baseline gap-2">
+              <span class="project-counter text-2xl md:text-5xl font-extrabold" data-target="1000">0</span>
+              <span class="text-lg md:text-5xl font-extrabold">+</span>
+            </div>
+            <div>
+              <span class="text-sm md:text-base mt-1">Dự án đã hoàn thành</span>
+            </div>
+            <span class="block w-6 md:w-8 h-0.5 bg-white mt-2"></span>
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+            <div class="flex items-baseline gap-2">
+              <span class="project-counter text-2xl md:text-5xl font-extrabold" data-target="300">0</span>
+              <span class="text-lg md:text-5xl font-extrabold">+</span>
+            </div>
+            <div>
+              <span class="text-sm md:text-base mt-1">Chuyên viên</span>
+            </div>
+            <span class="block w-6 md:w-8 h-0.5 bg-white mt-2"></span>
+          </div>
+          <div class="flex flex-col items-center md:items-start">
+            <span class="project-counter text-2xl md:text-5xl font-extrabold" data-target="80">0</span>
+            <span class="text-sm md:text-base mt-1">Đối tác kinh doanh</span>
+            <span class="block w-6 md:w-8 h-0.5 bg-white mt-2"></span>
           </div>
         </div>
         <!-- <a href="introduce/introduce.html" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-lg rounded shadow transition-all duration-200 mt-4">Đọc thêm</a> -->
@@ -371,9 +375,9 @@
     </div>
     <div class="relative z-10 w-full flex items-center justify-center mt-10 px-8 bottom-16">
       <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8 px-2 max-w-[1680px]" id="project-carousel">
-        <img src="img/Dinh_Den_Kim_Lien.jpg" alt="Project 1" class="w-full h-[34vw] max-h-[520px] object-cover rounded-xl">
-        <img src="img/denphudong(bl1).png" alt="Project 2" class="w-full h-[34vw] max-h-[520px] object-cover rounded-xl">
-        <img src="../img/lemat(bl7).png" alt="Project 3" class="w-full h-[34vw] max-h-[520px] object-cover rounded-xl">
+  <img src="img/Dinh_Den_Kim_Lien.jpg" alt="Project 1" class="w-full h-auto md:h-[34vw] max-h-[520px] object-contain md:object-cover rounded-xl">
+  <img src="img/denphudong(bl1).png" alt="Project 2" class="w-full h-auto md:h-[34vw] max-h-[520px] object-contain md:object-cover rounded-xl">
+  <img src="../img/lemat(bl7).png" alt="Project 3" class="w-full h-auto md:h-[34vw] max-h-[520px] object-contain md:object-cover rounded-xl">
       </div>
     </div>
   </div>
@@ -394,12 +398,12 @@
     <div class="container mx-auto px-10">
       <br>
       <br>
-      <div class="grid grid-cols-3 gap-y-8 gap-x-6 items-center justify-items-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-6 items-center justify-items-center text-center">
         <span class="text-2xl font-black">NGHỀ GỐM SỨ</span>
         <span class="text-2xl font-black">NGHỀ NỀ NGÕA</span>
         <span class="text-2xl font-black">ĐÁ MỸ NGHỆ</span>
         <span class="text-2xl font-black">NGHỀ ĐÚC ĐỒNG</span>
-        <span class="text-2xl font-black flex flex-col items-center justify-center">
+        <span class="text-2xl font-black">
           NGHỀ CHẠM KHẮC<br>
           <span class="block w-full text-center">GỖ THỦ CÔNG</span>
         </span>
